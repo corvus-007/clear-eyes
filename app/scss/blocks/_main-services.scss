@@ -1,0 +1,16 @@
+.main-services {
+
+}
+
+.main-services__row-tables {
+
+  @include mq-min(768px) {
+    display: flex;
+  }
+}
+
+.main-services__row-tables-column-left {
+  width: calc(5 / 12 * 100%);
+  flex-shrink: 0;
+  margin-right: 60px;
+}

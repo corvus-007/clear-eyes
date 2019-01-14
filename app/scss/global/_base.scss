@@ -1,0 +1,41 @@
+html {
+  font-size: $font-size;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-weight: normal;
+  font-size: 100%;
+  line-height: 1.45;
+  font-family: $primary-font;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: $base-color;
+  // background-color: #ffffff;
+  background-color: #fafafa;
+}
+
+.container {
+  @include make-container();
+}
+
+.site-link {
+  color: $accent-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: lighten($accent-color, 10%);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.visually-hidden {
+  @include visually-hidden();
+}

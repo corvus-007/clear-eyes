@@ -1,0 +1,64 @@
+.free-diagnostic {
+  color: #ffffff;
+  background: $accent-color;
+}
+
+.free-diagnostic__content {
+  @include mq-min(1024px) {
+    max-width: 60%;
+  }
+  @include mq-min(1200px) {
+    max-width: 50%;
+  }
+}
+
+.free-diagnostic__title {
+  margin-bottom: 20px;
+}
+
+.free-diagnostic__period-date {
+  margin: 0;
+}
+
+.free-diagnostic__actions {
+  @include clear-list();
+
+  @include mq-min(568px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.free-diagnostic__actions-item {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq-min(568px) {
+    width: 50%;
+    margin-bottom: 0;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.free-diagnostic__footer {
+  margin-top: 55px;
+
+  @include mq-min(1024px) {
+    max-width: 60%;
+  }
+}
+
+.free-diagnostic__action {
+  width: 100%;
+}
+
+.free-diagnostic__note {
+  margin: 0;
+}

@@ -1,0 +1,53 @@
+.about-clinic {
+  position: relative;
+
+  @include mq-max(1023px) {
+    padding-bottom: 0;
+  }
+}
+
+.about-clinic__inner {
+  @include mq-min(1024px) {
+
+  }
+}
+
+.about-clinic__content {
+  margin-bottom: 50px;
+
+  blockquote {
+    margin: 0;
+    font-style: normal;
+
+    footer {
+      margin-top: 1em;
+    }
+
+    cite {
+      font-style: normal;
+      font-weight: 600;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  @include mq-min(1024px) {
+    max-width: 50%;
+    margin-bottom: 0;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+}
+
+.about-clinic__slider {
+  @include mq-min(1024px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 50%;
+  }
+}

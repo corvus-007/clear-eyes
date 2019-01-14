@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+  @@include('blocks/main-header.html')
+
+  <div class="first-screen-section homepage-first-screen common-section" style="background-image: url(images/bg-home-first-screen.jpg);">
+    <div class="first-screen-section__inner container">
+      <div class="homepage-first-screen__content first-screen-section__content">
+        <ul class="homepage-first-screen__actions">
+          <li class="homepage-first-screen__actions-item">
+            <button class="homepage-first-screen__button button" type="button">
+              Отзывы
+              <svg class="button__icon button__icon--right">
+                <use xlink:href="images/symbols.svg#x"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="homepage-first-screen__actions-item">
+            <button class="homepage-first-screen__button button" type="button">
+              Заказать выписку
+              <svg class="button__icon button__icon--right">
+                <use xlink:href="images/symbols.svg#x"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="homepage-first-screen__actions-item">
+            <button class="homepage-first-screen__button button" type="button">
+              Пожаловаться директору
+              <svg class="button__icon button__icon--right">
+                <use xlink:href="images/symbols.svg#x"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="common-section about-clinic">
+    <div class="about-clinic__inner container">
+      <div class="about-clinic__content common-text">
+        <div class="common-section__header">
+          <h2 class="common-title common-title--accent-color">Офтальмологическая клиника ЯСНО ВИЖУ:<br>
+            Нас рекомендуют близким и друзьям</h2>
+        </div>
+        <blockquote>
+          <p>Московская Глазная клиника профессора Елены Ивановны Беликовой — специализированный офтальмологический центр, оказывающий весь спектр услуг по диагностике и восстановлению зрения. Клиника микрохирургии глаза д.м.н. Е.И. Беликовой занимает лидирующие позиции среди офтальмологических клиник в Москве и входит в перечень лучших офтальмологических медицинских центров России</p>
+          <footer>
+            <cite>
+              Профессор Антонюк Сергей Владимирович
+              <span>Основатель ЯСНО ВИЖУ</span>
+            </cite>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+    <div class="about-clinic__slider about-clinic-slider" data-about-clinic-slider>
+      <div class="about-clinic-slider__item" aria-hidden="true">
+        <img src="images/about-clinic-slides/01.jpg" srcset="images/about-clinic-slides/01@2x.jpg 2x" alt="Слайд 1">
+      </div>
+      <div class="about-clinic-slider__item" aria-hidden="true">
+        <img src="images/about-clinic-slides/01.jpg" srcset="images/about-clinic-slides/01@2x.jpg 2x" alt="Слайд 2">
+      </div>
+      <div class="about-clinic-slider__item" aria-hidden="true">
+        <img src="images/about-clinic-slides/01.jpg" srcset="images/about-clinic-slides/01@2x.jpg 2x" alt="Слайд 3">
+      </div>
+      <div class="about-clinic-slider__item" aria-hidden="true">
+        <img src="images/about-clinic-slides/01.jpg" srcset="images/about-clinic-slides/01@2x.jpg 2x" alt="Слайд 4">
+      </div>
+    </div>
+  </section>
+
+  <section class="common-section free-diagnostic">
+    <div class="container">
+      <div class="free-diagnostic__content">
+        <div class="common-section__header">
+          <h2 class="free-diagnostic__title common-title">Бесплатное* обследование и консультация хирурга перед операцией</h2>
+          <p class="free-diagnostic__period-date common-text">Предложение действует с 01.12.2018 до 01.02.2019 гг.</p>
+        </div>
+        <ul class="free-diagnostic__actions">
+          <li class="free-diagnostic__actions-item">
+            <button class="free-diagnostic__action button button--outline-white" type="button">Заказать звонок</button>
+          </li>
+          <li class="free-diagnostic__actions-item">
+            <button class="free-diagnostic__action button button--fill-white" type="button">Записаться на прием</button>
+          </li>
+        </ul>
+      </div>
+      <div class="free-diagnostic__footer">
+        <p class="free-diagnostic__note"><small>*Стоимость обследования будет вычтена из стоимости операции, если операция будет сделана в течение месяца после проведения диагностического обследования.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="common-section experts">
+    <div class="container">
+      <div class="experts__header common-section__header">
+        <h2 class="experts__title common-title">Наши специалисты</h2>
+        <p class="experts-header__additional-side common-text">
+          <a class="site-link" href="">Все специалисты</a>
+        </p>
+        <p class="experts__intro common-text">Попасть в команду «Офтальмологическая клиника ЯСНО ВИЖУ» могут только лучшие врачи-офтальмологи с многолетней практикой и доказанным опытом. Наши офтальмологи не только лечат. Они помогают сохранить зрение и находят подход и к взрослым, и к детям</p>
+      </div>
+      <ul class="experts__carousel experts-carousel" data-experts-carousel>
+        <li class="experts-carousel__item">
+          <div class="experts__person person-card">
+            <a href="doctor-page.html" class="person-card__wraplink">
+              <div class="experts-carousel__photo person-card__photo">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3fa46375259c39d07d0227e8ade6daa&auto=format&fit=crop&w=634&q=80" alt="Константин Константинопольский">
+              </div>
+              <p class="experts-carousel__content person-card__content">
+                <span class="experts-carousel__post person-card__post">Директор филиала</span>
+                <b class="experts-carousel__name person-card__name">Антонюк Вероника Сергеевна</b>
+              </p>
+            </a>
+          </div>
+        </li>
+        <li class="experts-carousel__item">
+          <div class="experts__person person-card">
+            <a href="doctor-page.html" class="person-card__wraplink">
+              <div class="experts-carousel__photo person-card__photo">
+                <img src="https://images.unsplash.com/photo-1495638671147-2cb03fe8e33e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjIxMTIzfQ&s=9565830f3bf16c103d38265f5036ba3c&auto=format&fit=crop&w=1350&q=80" alt="Глеб Шевченко">
+              </div>
+              <p class="experts-carousel__content person-card__content">
+                <span class="experts-carousel__post person-card__post">Профессор</span>
+                <b class="experts-carousel__name person-card__name">Антонюк Сергей Владимирович</b>
+              </p>
+            </a>
+          </div>
+        </li>
+        <li class="experts-carousel__item">
+          <div class="experts__person person-card">
+            <a href="doctor-page.html" class="person-card__wraplink">
+              <div class="experts-carousel__photo person-card__photo">
+                <img src="https://uinames.com/api/photos/female/22.jpg" alt="Василий Романов">
+              </div>
+              <p class="experts-carousel__content person-card__content">
+                <span class="experts-carousel__post person-card__post">Администратор клиники</span>
+                <b class="experts-carousel__name person-card__name">Фоминых Евгения Александровна</b>
+              </p>
+            </a>
+          </div>
+        </li>
+        <li class="experts-carousel__item">
+          <div class="experts__person person-card">
+            <a href="doctor-page.html" class="person-card__wraplink">
+              <div class="experts-carousel__photo person-card__photo">
+                <img src="https://uinames.com/api/photos/male/13.jpg" alt="Богдан Яковлев">
+              </div>
+              <p class="experts-carousel__content person-card__content">
+                <span class="experts-carousel__post person-card__post">маммолог</span>
+                <b class="experts-carousel__name person-card__name">Богдан Яковлев</b>
+              </p>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <p class="experts__actions">
+        <button class="experts__to-appointment-with-doctor button" type="button">Запись на прием</button>
+      </p>
+    </div>
+  </section>
+
+  <section class="common-section advantages">
+    <div class="container">
+      <div class="common-section__header visually-hidden">
+        <h2 class="common-title">Преимущества</h2>
+      </div>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <img class="advantages__item-icon" src="images/svg-symbols/x.svg" alt="" width="96" height="96">
+          <p class="advantages__item-caption"><em>Ценим доверие</em></p>
+          <p class="advantages__item-description">Объясняем диагнозы и схему лечения, пишем разборчиво</p>
+        </li>
+        <li class="advantages__item">
+          <img class="advantages__item-icon" src="images/svg-symbols/x.svg" alt="" width="96" height="96">
+          <p class="advantages__item-caption"><em>Опыт 15 лет</em></p>
+          <p class="advantages__item-description">Заботимся о здоровье глаз взрослых и детей</p>
+        </li>
+        <li class="advantages__item">
+          <img class="advantages__item-icon" src="images/svg-symbols/x.svg" alt="" width="96" height="96">
+          <p class="advantages__item-caption"><em>12 докторов</em></p>
+          <p class="advantages__item-description">Врачи офтальмологи и офтальмохирурги</p>
+        </li>
+        <li class="advantages__item">
+          <img class="advantages__item-icon" src="images/svg-symbols/x.svg" alt="" width="96" height="96">
+          <p class="advantages__item-caption"><em>Удобное расположение</em></p>
+          <p class="advantages__item-description">Стараемся быть ближе к нашим пациентам</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="common-section preview-reviews">
+    <div class="container">
+      <div class="preview-reviews__header common-section__header">
+        <h2 class="preview-reviews__title common-title">Отзывы</h2>
+        <p class="preview-reviews-header__additional-side common-text">
+          <a class="site-link" href="">Все отзывы</a>
+        </p>
+      </div>
+      <ul class="preview-reviews__carousel preview-reviews-carousel" data-preview-reviews-carousel>
+        <li class="preview-reviews-carousel__item preview-review">
+          <blockquote class="preview-review__content">
+            <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
+            <cite class="preview-review__author-name">Ольга</cite>
+            <p class="preview-review__text">
+              Здравствуйте, Сергей Владимирович! Спасибо огромное, что посмотрели мои обследования и развеяли страхи. Думаю осенью-зимой поехать в Москву и проконтролировать у Вас свои глаза на предмет глаукомы. Пока капли помогают, отменять здесь не советуют. Вы лучший! Спасибо за Ваш труд и отзывчивость, за подаренное вновь зрение. И от…
+            </p>
+          </blockquote>
+          <button class="preview-review__to-full-review button button--outline-accent">Отзыв полностью</button>
+        </li>
+        <li class="preview-reviews-carousel__item preview-review">
+          <blockquote class="preview-review__content">
+            <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
+            <cite class="preview-review__author-name">Ольга</cite>
+            <p class="preview-review__text">
+              Здравствуйте, Сергей Владимирович! Спасибо огромное, что посмотрели мои обследования и развеяли страхи. Думаю осенью-зимой поехать в Москву и проконтролировать у Вас свои глаза на предмет глаукомы. Пока капли помогают, отменять здесь не советуют. Вы лучший! Спасибо за Ваш труд и отзывчивость, за подаренное вновь зрение. И от…
+            </p>
+          </blockquote>
+          <button class="preview-review__to-full-review button button--outline-accent">Отзыв полностью</button>
+        </li>
+        <li class="preview-reviews-carousel__item preview-review">
+          <blockquote class="preview-review__content">
+            <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
+            <cite class="preview-review__author-name">Ольга</cite>
+            <p class="preview-review__text">
+              Здравствуйте, Сергей Владимирович! Спасибо огромное, что посмотрели мои обследования и развеяли страхи. Думаю осенью-зимой поехать в Москву и проконтролировать у Вас свои глаза на предмет глаукомы. Пока капли помогают, отменять здесь не советуют. Вы лучший! Спасибо за Ваш труд и отзывчивость, за подаренное вновь зрение. И от…
+            </p>
+          </blockquote>
+          <button class="preview-review__to-full-review button button--outline-accent">Отзыв полностью</button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="common-section certificates">
+    <div class="container">
+      <div class="certificates__header common-section__header">
+        <h2 class="certificates__title common-title">Лицензии</h2>
+        <p class="certificates-header__additional-side common-text">
+          <a class="site-link" href="">Все документы и лицензии</a>
+        </p>
+      </div>
+      <ul class="certificates__carousel certificates-carousel" data-certificates-carousel>
+        <li class="certificates-carousel__item certificates__item">
+          <a href="images/certificates-slides/01.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/01.jpg" alt="Слайд 1">
+            </div>
+          </a>
+        </li>
+        <li class="certificates-carousel__item certificates__item">
+          <a href="images/certificates-slides/02.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/02.jpg" alt="Слайд 2">
+            </div>
+          </a>
+        </li>
+        <li class="certificates-carousel__item certificates__item">
+          <a href="images/certificates-slides/03.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/03.jpg" alt="Слайд 3">
+            </div>
+          </a>
+        </li>
+        <li class="certificates-carousel__item certificates__item">
+          <a href="images/certificates-slides/01.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/01.jpg" alt="Слайд 4">
+            </div>
+          </a>
+        </li>
+        <li class="certificates-carousel__item certificates__item">
+          <a href="images/certificates-slides/02.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/02.jpg" alt="Слайд 5">
+            </div>
+          </a>
+        </li>
+        <li class="certificates-carousel__item certificates__item">
+          <a href="images/certificates-slides/03.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/03.jpg" alt="Слайд 6">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="common-section contact">
+    <div class="container">
+      <div class="contact__content">
+        <div class="common-section__header">
+          <h2 class="contact__title common-title">Контактная информация</h2>
+        </div>
+        <div class="contact__info contact-info">
+          <div class="contact-info__section">
+            <h3 class="contact-info__title">Адрес</h3>
+            <span class="contact-info__value">Москва, ул. 3-я Нововатутинская дом 13, корпус 2</span>
+          </div>
+          <div class="contact-info__section">
+            <h3 class="contact-info__title">Телефон</h3>
+            <ul class="contact-info__list">
+              <li class="contact-info__list-item">
+                <a class="contact-info__value" href="tel:+74951010177">+7 (495) 101-01-77</a>
+              </li>
+              <li class="contact-info__list-item">
+                <a class="contact-info__value" href="tel:+74991301439">+7 (499) 130-14-39</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-info__section">
+            <h3 class="contact-info__title">График работы</h3>
+            <ul class="contact-info__value contact-work-time">
+              <li class="contact-work-time__item">
+                <span class="contact-work-time__key">Вт-Пт</span>
+                <span class="contact-work-time__val">10:00–19:00</span>
+              </li>
+              <li class="contact-work-time__item">
+                <span class="contact-work-time__key">Сб</span>
+                <span class="contact-work-time__val">09:00–13:00</span>
+              </li>
+              <li class="contact-work-time__item">
+                <span class="contact-work-time__key">Вс-Пн</span>
+                <span class="contact-work-time__val">Выходной</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact__taxi-wrapper">
+          <script src="//yastatic.net/taxi-widget/ya-taxi-widget.js"></script>
+          <div class="ya-taxi-widget" data-use-location="true" data-size="s" data-theme="action" data-title="На такси в ТРК Клиник" data-point-a="" data-point-b="34.31736,53.273323" data-ref="http%3A%2F%2Flocalhost%3A3006%2F" data-proxy-url="https://3.redirect.appmetrica.yandex.com/route?start-lat={start-lat}&amp;start-lon={start-lon}&amp;end-lat={end-lat}&amp;end-lon={end-lon}&amp;ref={ref}&amp;appmetrica_tracking_id=1178268795219780156" data-description="Объездная улица, 32"></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact__map" id="contact-map"></div>
+  </section>
+
+  @@include('blocks/main-footer.html')
+
+  @@include('blocks/site-scripts.html')
+</body>
+
+</html>

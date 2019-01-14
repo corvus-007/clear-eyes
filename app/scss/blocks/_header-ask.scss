@@ -1,0 +1,26 @@
+.header-ask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-ask__doctor-photo {
+  @include make-fit-object();
+
+  border-radius: 50%;
+  width: 180px;
+  flex-shrink: 0;
+
+  @include mq-max(1365px) {
+    width: vh(110);
+  }
+}
+
+.header-ask__caption {
+  font-size: 14px;
+  text-align: center;
+}
+
+.header-ask__button {
+  min-width: auto;
+}

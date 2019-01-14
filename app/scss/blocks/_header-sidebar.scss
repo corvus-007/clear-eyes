@@ -1,0 +1,18 @@
+.header-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  padding-top: 0;
+  color: #ffffff;
+  background-color: rgba($accent-color, 0.8);
+  box-sizing: border-box;
+}
+
+.header-sidebar__main-nav {
+  margin-bottom: 15px;
+}
+
+.header-sidebar__ask {
+
+}

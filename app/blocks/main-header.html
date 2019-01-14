@@ -1,0 +1,125 @@
+@@include('splash-screen.html')
+
+<div class="main-header__topbar topbar">
+  <div class="topbar__inner container">
+    <ul class="topbar__social social">
+      <li class="social__item">
+        <a class="topbar__social-link social__link" href="" target="_blank">
+          <svg class="topbar__social-icon social__icon" width="16" height="16">
+            <use xlink:href="images/symbols.svg#vk"></use>
+          </svg>
+          <span class="visually-hidden">Вконтакте</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="topbar__social-link social__link" href="" target="_blank">
+          <svg class="topbar__social-icon social__icon" width="16" height="16">
+            <use xlink:href="images/symbols.svg#facebook"></use>
+          </svg>
+          <span class="visually-hidden">Facebook</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="topbar__social-link social__link" href="" target="_blank">
+          <svg class="topbar__social-icon social__icon" width="16" height="16">
+            <use xlink:href="images/symbols.svg#instagram"></use>
+          </svg>
+          <span class="visually-hidden">Instagram</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="topbar__phones topbar-phones">
+      <li class="topbar-phones__item">
+        <a href="tel:+74951010177" class="topbar-phones__item-link">
+          <svg class="topbar-phones__item-icon" width="16" height="16">
+            <use xlink:href="images/symbols.svg#x"></use>
+          </svg>
+          +7 (495) 101-01-77
+        </a>
+      </li>
+      <li class="topbar-phones__item">
+        <a href="tel:+74991301439" class="topbar-phones__item-link">
+          <svg class="topbar-phones__item-icon" width="16" height="16">
+            <use xlink:href="images/symbols.svg#x"></use>
+          </svg>
+          +7 (499) 130-14-39
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<header class="main-header">
+  <div class="main-header__inner container">
+    <div class="main-header__sidebar header-sidebar">
+      <nav class="header-sidebar__main-nav main-nav">
+        <ul class="main-nav__menu menu">
+          <li class="menu-item current-menu-item"><a href="about-page.html">О клинике</a></li>
+          <li class="menu-item"><a href="services-page.html">Услуги и цены</a></li>
+          <li class="menu-item"><a href="">Специалисты</a></li>
+          <li class="menu-item"><a href="">Пациентам</a></li>
+          <li class="menu-item"><a href="">Документы</a></li>
+          <li class="menu-item"><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header-sidebar__ask header-ask">
+        <div class="header-ask__doctor-photo">
+          <img src="images/ask-doctor-photo.jpg" srcset="images/ask-doctor-photo@2x.jpg 2x" alt="Фотография доктора">
+        </div>
+        <p class="header-ask__caption">Задайте свой вопрос офтальмологу клиники</p>
+        <button class="header-ask__button button button--fill-white button--fluid" type="button">Задать вопрос</button>
+      </div>
+    </div>
+    <div class="main-header__logo">
+      <a href="index.html">
+        <img src="images/logo.svg" width="160" alt="Логотип офтальмологической клиники «Ясно Вижу»">
+      </a>
+    </div>
+    <div class="main-header__search header-search">
+      <button class="header-search__toggle button" type="button">
+        <svg class="header-search__toggle-icon button__icon" width="16" height="16">
+          <use xlink:href="images/symbols.svg#magnify"></use>
+        </svg>
+      </button>
+      <form class="header-search__form" action="" method="GET" autocomplete="off">
+        <input class="header-search__input input" type="search" name="q" placeholder="Поиск по сайту" minlength="3" required>
+        <button class="header-search__submit" type="submit">
+          <svg class="header-search__submit-icon" width="16" height="16">
+            <use xlink:href="images/symbols.svg#magnify"></use>
+          </svg>
+          <span class="visually-hidden">Искать</span>
+        </button>
+      </form>
+    </div>
+    <ul class="main-header__actions header-actions">
+      <!-- <li class="header-actions__item">
+        <button class="header-actions__button button" type="button">
+          <span class="header-actions__button-text">Написать</span>
+          <svg class="header-actions__button-icon button__icon button__icon--right" width="16" height="16">
+            <use xlink:href="images/symbols.svg#x"></use>
+          </svg>
+        </button>
+      </li> -->
+      <li class="header-actions__item">
+        <button class="header-actions__button button" type="button">
+          <span class="header-actions__button-text">Онлайн запись</span>
+          <svg class="header-actions__button-icon button__icon button__icon--right" width="16" height="16">
+            <use xlink:href="images/symbols.svg#x"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="header-actions__item">
+        <button class="header-actions__button button" type="button">
+          <span class="header-actions__button-text">Перезвоните мне</span>
+          <svg class="header-actions__button-icon button__icon button__icon--right" width="16" height="16">
+            <use xlink:href="images/symbols.svg#x"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+    <button class="main-header__cover-toggle out-cover-toggle">
+      <span class="out-cover-toggle__line"></span>
+      <span class="visually-hidden">Показать меню</span>
+    </button>
+  </div>
+</header>

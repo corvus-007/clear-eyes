@@ -1,0 +1,14 @@
+.common-section {
+  padding-top: $gutter * 2;
+  padding-bottom: $gutter * 2;
+  // outline: 1px solid lightcoral;
+
+  @include mq-min(1024px) {
+    padding-top: vh(55);
+    padding-bottom: vh(55);
+  }
+}
+
+.common-section__header {
+  margin-bottom: 55px;
+}

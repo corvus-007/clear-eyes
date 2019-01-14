@@ -1,0 +1,50 @@
+.contact-info {
+  line-height: 1.2;
+
+  @include mq-range(667px, 767px) {
+    display: flex;
+  }
+}
+
+.contact-info__section {
+  margin-bottom: 30px;
+
+  @include mq-range(667px, 767px) {
+    @include calc-column-width(4, 20px);
+  }
+}
+
+.contact-info__title {
+  margin: 0;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  color: $muted-color;
+}
+
+.contact-info__value {
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  color: $base-color;
+
+  @include mq-range(667px, 767px) {
+    font-size: 15px;
+  }
+
+  @include mq-min(1024px) {
+    font-size: vh(17);
+  }
+}
+
+.contact-info__list {
+  @include clear-list();
+}
+
+.contact-info__list-item {
+  margin-bottom: 2px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

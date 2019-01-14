@@ -1,0 +1,12 @@
+.main-nav {
+  .main-nav__toggle {
+    @include mq-min(1024px) {
+      display: none;
+    }
+  }
+
+  .main-nav__menu {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+}

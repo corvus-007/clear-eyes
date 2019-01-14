@@ -1,0 +1,37 @@
+.menu {
+  @include clear-list();
+
+  .menu-item {
+
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: $duration / 2;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(#000000, 0.05);
+    }
+  }
+
+  .current-menu-item a {
+    font-weight: 700;
+  }
+
+  @include mq-min(1024px) {
+
+    a {
+      font-size: vh(18);
+      padding-top: vh(12);
+      padding-bottom: vh(12);
+    }
+  }
+}

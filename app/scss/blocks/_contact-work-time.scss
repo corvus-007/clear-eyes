@@ -1,0 +1,39 @@
+.contact-work-time {
+  @include clear-list();
+
+  display: table;
+  @include mq-range(667px, 767px) {
+    display: block;
+  }
+}
+
+.contact-work-time__item {
+  display: table-row;
+
+  @include mq-range(667px, 767px) {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+.contact-work-time__key {
+  display: table-cell;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 20px;
+
+  @include mq-range(667px, 767px) {
+    display: block;
+  }
+}
+
+.contact-work-time__val {
+  text-transform: lowercase;
+  text-align: right;
+  display: table-cell;
+
+  @include mq-range(667px, 767px) {
+    display: block;
+    text-align: left;
+  }
+}

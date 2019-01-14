@@ -1,0 +1,24 @@
+.common-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.15;
+  word-break: break-word;
+
+  &--accent-color {
+    color: $accent-color;
+  }
+
+  &--white-color {
+    color: #ffffff;
+  }
+
+  @include mq-min(768px) {
+    font-size: 32px;
+    word-break: normal;
+  }
+
+  @include mq-min(1024px) {
+    font-size: vh(36);
+  }
+}

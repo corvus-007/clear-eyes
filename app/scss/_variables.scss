@@ -1,0 +1,36 @@
+$base-color: #323232;
+$accent-color: #49b7a8;
+
+$grey-63: #3f3f3f;
+$grey-187: #bbbbbb;
+$grey-230: #e6e6e6;
+$grey-241: #f1f1f1;
+$grey-243: #f3f3f3;
+$grey-250: #fafafa;
+
+$muted-color: #7a7a7a;
+
+$success-color: #11fd6d;
+$info-color: #b9dfff;
+$warning-color: #edf512;
+$danger-color: #fd0d4d;
+
+// Fonts
+$font-size: 18px;
+$primary-font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$secondary-font: inherit;
+
+
+$duration: 0.25s;
+$border-radius: 2px;
+
+// Grid
+$grid-columns: 12;
+$gutter: 30px;
+$vh-height-bp: 800px;
+
+$height-topbar-mobile: 127px;
+$height-topbar-desktop: 50px;
+$height-header-mobile: 68px;
+$height-header-desktop: 95px;
+$width-header-sidebar: 250px;

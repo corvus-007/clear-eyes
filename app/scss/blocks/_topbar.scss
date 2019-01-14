@@ -1,0 +1,50 @@
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  max-width: 100vw;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #ffffff;
+  background-color: #3F3F3F;
+}
+
+.topbar__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq-min(568px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.topbar__social {
+  margin-bottom: 20px;
+
+  @include mq-min(568px) {
+    margin-bottom: 0;
+  }
+}
+
+.topbar__social-link {
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.topbar__social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.topbar__phones {
+  @include mq-min(568px) {
+    margin-left: $gutter;
+  }
+}
