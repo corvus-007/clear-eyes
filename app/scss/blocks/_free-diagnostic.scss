@@ -1,12 +1,44 @@
 .free-diagnostic {
   color: #ffffff;
-  background: $accent-color;
+
+
+  @include mq-max(1023px) {
+    background-image: none;
+  }
+
+  @include mq-min(1024px) {
+    position: relative;
+    background-color: $accent-color;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 60%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("images/bg-left-shape.svg") no-repeat center right;
+      background-size: auto 100%;
+    }
+  }
+}
+
+.free-diagnostic__inner {
+  position: relative;
+}
+
+.free-diagnostic__header {
+  margin-bottom: 30px;
 }
 
 .free-diagnostic__content {
   @include mq-min(1024px) {
     max-width: 60%;
   }
+
   @include mq-min(1200px) {
     max-width: 50%;
   }
@@ -48,7 +80,7 @@
 }
 
 .free-diagnostic__footer {
-  margin-top: 55px;
+  margin-top: 30px;
 
   @include mq-min(1024px) {
     max-width: 60%;

@@ -1,5 +1,6 @@
 $base-color: #323232;
 $accent-color: #49b7a8;
+// $accent-color: #0659b9;
 
 $grey-63: #3f3f3f;
 $grey-187: #bbbbbb;
@@ -17,7 +18,7 @@ $danger-color: #fd0d4d;
 
 // Fonts
 $font-size: 18px;
-$primary-font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$primary-font: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $secondary-font: inherit;
 
 
@@ -30,7 +31,7 @@ $gutter: 30px;
 $vh-height-bp: 800px;
 
 $height-topbar-mobile: 127px;
-$height-topbar-desktop: 50px;
+$height-topbar-desktop: 40px;
 $height-header-mobile: 68px;
 $height-header-desktop: 95px;
 $width-header-sidebar: 250px;

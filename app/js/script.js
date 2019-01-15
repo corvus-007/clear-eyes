@@ -9,9 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
     "mask": "+7 (999) 999-99-99"
   });
 
+  $('[data-intro-slider]').slick({
+    accessibility: false,
+    speed: 700,
+    arrows: false,
+    dots: true,
+    autoplay: true
+  });
+
   $('[data-about-clinic-slider]').slick({
     accessibility: false,
-    speed: 800,
+    speed: 700,
     // autoplay: true,
     responsive: [{
       breakpoint: 670,

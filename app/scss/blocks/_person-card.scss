@@ -45,12 +45,17 @@
   }
 }
 
-.person-card__post {
+.person-card__name {
   display: block;
   font-weight: 600;
 }
 
-.person-card__name {
+.person-card__post {
   display: block;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 14px;
+
+  @include mq-min(1024px) {
+    font-size: vh(14);
+  }
 }

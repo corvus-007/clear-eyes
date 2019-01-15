@@ -1,12 +1,12 @@
 .topbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   max-width: 100vw;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: #ffffff;
   background-color: #3F3F3F;
 }
@@ -44,6 +44,27 @@
 }
 
 .topbar__phones {
+  @include mq-min(568px) {
+    margin-left: auto;
+  }
+}
+
+.topbar__to-callback {
+  padding: 0;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  @include dotted-link(1.5px);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+
   @include mq-min(568px) {
     margin-left: $gutter;
   }

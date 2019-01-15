@@ -51,11 +51,12 @@
 .experts-carousel__content {
   transform: translateY(-50px);
   color: #808180;
+  font-weight: 400;
   transition: $duration * 2;
   will-change: transform;
 
   .slick-center & {
-    transform: translateY(0) scale(1.11);
+    transform: translateY(0);
     color: $base-color;
   }
 

@@ -32,7 +32,7 @@
       <li class="topbar-phones__item">
         <a href="tel:+74951010177" class="topbar-phones__item-link">
           <svg class="topbar-phones__item-icon" width="16" height="16">
-            <use xlink:href="images/symbols.svg#x"></use>
+            <use xlink:href="images/symbols.svg#phone"></use>
           </svg>
           +7 (495) 101-01-77
         </a>
@@ -40,18 +40,19 @@
       <li class="topbar-phones__item">
         <a href="tel:+74991301439" class="topbar-phones__item-link">
           <svg class="topbar-phones__item-icon" width="16" height="16">
-            <use xlink:href="images/symbols.svg#x"></use>
+            <use xlink:href="images/symbols.svg#phone"></use>
           </svg>
           +7 (499) 130-14-39
         </a>
       </li>
     </ul>
+    <button class="topbar__to-callback" data-fancybox data-src="#popup-callback">Перезвоните мне</button>
   </div>
 </div>
 
 <header class="main-header">
   <div class="main-header__inner container">
-    <div class="main-header__sidebar header-sidebar">
+    <!-- <div class="main-header__sidebar header-sidebar">
       <nav class="header-sidebar__main-nav main-nav">
         <ul class="main-nav__menu menu">
           <li class="menu-item current-menu-item"><a href="about-page.html">О клинике</a></li>
@@ -69,13 +70,13 @@
         <p class="header-ask__caption">Задайте свой вопрос офтальмологу клиники</p>
         <button class="header-ask__button button button--fill-white button--fluid" type="button">Задать вопрос</button>
       </div>
-    </div>
+    </div> -->
     <div class="main-header__logo">
       <a href="index.html">
         <img src="images/logo.svg" width="160" alt="Логотип офтальмологической клиники «Ясно Вижу»">
       </a>
     </div>
-    <div class="main-header__search header-search">
+    <!-- <div class="main-header__search header-search">
       <button class="header-search__toggle button" type="button">
         <svg class="header-search__toggle-icon button__icon" width="16" height="16">
           <use xlink:href="images/symbols.svg#magnify"></use>
@@ -90,16 +91,26 @@
           <span class="visually-hidden">Искать</span>
         </button>
       </form>
-    </div>
-    <ul class="main-header__actions header-actions">
-      <!-- <li class="header-actions__item">
+    </div> -->
+    <nav class="main-header__main-nav main-nav">
+      <ul class="main-nav__menu menu">
+        <li class="menu-item current-menu-item"><a href="about-page.html">О клинике</a></li>
+        <li class="menu-item"><a href="services-page.html">Услуги и цены</a></li>
+        <li class="menu-item"><a href="">Специалисты</a></li>
+        <li class="menu-item"><a href="">Пациентам</a></li>
+        <li class="menu-item"><a href="">Документы</a></li>
+        <li class="menu-item"><a href="">Контакты</a></li>
+      </ul>
+    </nav>
+    <!-- <ul class="main-header__actions header-actions">
+      <li class="header-actions__item">
         <button class="header-actions__button button" type="button">
           <span class="header-actions__button-text">Написать</span>
           <svg class="header-actions__button-icon button__icon button__icon--right" width="16" height="16">
             <use xlink:href="images/symbols.svg#x"></use>
           </svg>
         </button>
-      </li> -->
+      </li>
       <li class="header-actions__item">
         <button class="header-actions__button button" type="button">
           <span class="header-actions__button-text">Онлайн запись</span>
@@ -116,7 +127,8 @@
           </svg>
         </button>
       </li>
-    </ul>
+    </ul> -->
+    <button class="main-header__to-appointment button">Записаться на прием</button>
     <button class="main-header__cover-toggle out-cover-toggle">
       <span class="out-cover-toggle__line"></span>
       <span class="visually-hidden">Показать меню</span>

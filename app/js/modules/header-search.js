@@ -1,5 +1,10 @@
 window.headerSearch = (function () {
   var headerSearch = document.querySelector('.header-search');
+
+  if (!headerSearch) {
+    return;
+  }
+
   var headerSearchToggle = headerSearch.querySelector('.header-search__toggle');
   var headerSearchInput = headerSearch.querySelector('.header-search__input');
 

@@ -9,11 +9,6 @@
   background-size: cover;
   box-sizing: border-box;
 
-  @include mq-min(1024px) {
-    padding-top: calc(#{$height-topbar-desktop} + #{$height-header-desktop} + 60px);
-    height: 100vh;
-  }
-
   &--has-overlay {
     &::before {
       content: "";
@@ -24,6 +19,11 @@
       bottom: 0;
       background-color: rgba(#000000, 0.6);
     }
+  }
+
+  @include mq-min(1024px) {
+    padding-top: calc(#{$height-topbar-desktop} + #{$height-header-desktop} + 60px);
+    height: 100vh;
   }
 }
 

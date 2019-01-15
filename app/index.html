@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
-  <title>Document</title>
+  <title>Главная</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
@@ -14,32 +14,36 @@
 <body>
   @@include('blocks/main-header.html')
 
-  <div class="first-screen-section homepage-first-screen common-section" style="background-image: url(images/bg-home-first-screen.jpg);">
+  <div class="first-screen-section homepage-first-screen common-section" hidden style="background-image: url(images/bg-home-first-screen-v2.jpg);">
     <div class="first-screen-section__inner container">
       <div class="homepage-first-screen__content first-screen-section__content">
         <ul class="homepage-first-screen__actions">
-          <li class="homepage-first-screen__actions-item">
+          <!-- <li class="homepage-first-screen__actions-item">
             <button class="homepage-first-screen__button button" type="button">
+              <svg class="button__icon button__icon--left">
+                <use xlink:href="images/symbols.svg#x"></use>
+              </svg>
               Отзывы
-              <svg class="button__icon button__icon--right">
-                <use xlink:href="images/symbols.svg#x"></use>
-              </svg>
+            </button>
+          </li> -->
+          <li class="homepage-first-screen__actions-item">
+            <button class="homepage-first-screen__button iconizer-button" type="button">
+              <span class="iconizer-button__iconbox">
+                <svg class="iconizer-button__icon">
+                  <use xlink:href="images/symbols.svg#x"></use>
+                </svg>
+              </span>
+              <span class="iconizer-button__text">Заказать выписку</span>
             </button>
           </li>
           <li class="homepage-first-screen__actions-item">
-            <button class="homepage-first-screen__button button" type="button">
-              Заказать выписку
-              <svg class="button__icon button__icon--right">
-                <use xlink:href="images/symbols.svg#x"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="homepage-first-screen__actions-item">
-            <button class="homepage-first-screen__button button" type="button">
-              Пожаловаться директору
-              <svg class="button__icon button__icon--right">
-                <use xlink:href="images/symbols.svg#x"></use>
-              </svg>
+            <button class="homepage-first-screen__button iconizer-button" type="button">
+              <span class="iconizer-button__iconbox">
+                <svg class="iconizer-button__icon">
+                  <use xlink:href="images/symbols.svg#x"></use>
+                </svg>
+              </span>
+              <span class="iconizer-button__text">Написать директору</span>
             </button>
           </li>
         </ul>
@@ -47,11 +51,47 @@
     </div>
   </div>
 
+  <div class="intro">
+    <div class="intro__inner container">
+      <div class="intro__content">
+        <p class="intro__title common-title">Офтальмология <br> будущего</p>
+        <ul class="intro__actions">
+          <li class="intro__actions-item">
+            <button class="iconizer-button" type="button">
+              <span class="iconizer-button__iconbox">
+                <svg class="iconizer-button__icon">
+                  <!-- <use xlink:href="images/symbols.svg#news"></use> -->
+                  <use xlink:href="images/symbols.svg#attach-file"></use>
+                </svg>
+              </span>
+              <span class="iconizer-button__text">Заказать выписку</span>
+            </button>
+          </li>
+          <li class="intro__actions-item">
+            <button class="iconizer-button" type="button">
+              <span class="iconizer-button__iconbox">
+                <svg class="iconizer-button__icon">
+                  <!-- <use xlink:href="images/symbols.svg#angry"></use> -->
+                  <use xlink:href="images/symbols.svg#starred-message"></use>
+                </svg>
+              </span>
+              <span class="iconizer-button__text">Написать директору</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <ul class="intro__slider intro-slider" data-intro-slider>
+      <li class="intro-slider__item" style="background-image: url(images/bg-home-first-screen-v2.jpg);"></li>
+      <li class="intro-slider__item" style="background-image: url(images/bg-home-first-screen-v2.jpg);"></li>
+    </ul>
+  </div>
+
   <section class="common-section about-clinic">
     <div class="about-clinic__inner container">
       <div class="about-clinic__content common-text">
         <div class="common-section__header">
-          <h2 class="common-title common-title--accent-color">Офтальмологическая клиника ЯСНО ВИЖУ:<br>
+          <h2 class="common-title">Офтальмологическая клиника ЯСНО ВИЖУ:<br>
             Нас рекомендуют близким и друзьям</h2>
         </div>
         <blockquote>
@@ -81,10 +121,10 @@
     </div>
   </section>
 
-  <section class="common-section free-diagnostic">
-    <div class="container">
+  <section class="common-section free-diagnostic" style="background-image: url(images/bg-free-diagnostic.jpg);">
+    <div class="container free-diagnostic__inner">
       <div class="free-diagnostic__content">
-        <div class="common-section__header">
+        <div class="free-diagnostic__header common-section__header">
           <h2 class="free-diagnostic__title common-title">Бесплатное* обследование и консультация хирурга перед операцией</h2>
           <p class="free-diagnostic__period-date common-text">Предложение действует с 01.12.2018 до 01.02.2019 гг.</p>
         </div>
@@ -120,8 +160,8 @@
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3fa46375259c39d07d0227e8ade6daa&auto=format&fit=crop&w=634&q=80" alt="Константин Константинопольский">
               </div>
               <p class="experts-carousel__content person-card__content">
-                <span class="experts-carousel__post person-card__post">Директор филиала</span>
                 <b class="experts-carousel__name person-card__name">Антонюк Вероника Сергеевна</b>
+                <span class="experts-carousel__post person-card__post">Директор филиала</span>
               </p>
             </a>
           </div>
@@ -133,8 +173,8 @@
                 <img src="https://images.unsplash.com/photo-1495638671147-2cb03fe8e33e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjIxMTIzfQ&s=9565830f3bf16c103d38265f5036ba3c&auto=format&fit=crop&w=1350&q=80" alt="Глеб Шевченко">
               </div>
               <p class="experts-carousel__content person-card__content">
-                <span class="experts-carousel__post person-card__post">Профессор</span>
                 <b class="experts-carousel__name person-card__name">Антонюк Сергей Владимирович</b>
+                <span class="experts-carousel__post person-card__post">Профессор</span>
               </p>
             </a>
           </div>
@@ -146,8 +186,8 @@
                 <img src="https://uinames.com/api/photos/female/22.jpg" alt="Василий Романов">
               </div>
               <p class="experts-carousel__content person-card__content">
-                <span class="experts-carousel__post person-card__post">Администратор клиники</span>
                 <b class="experts-carousel__name person-card__name">Фоминых Евгения Александровна</b>
+                <span class="experts-carousel__post person-card__post">Администратор клиники</span>
               </p>
             </a>
           </div>
@@ -159,8 +199,8 @@
                 <img src="https://uinames.com/api/photos/male/13.jpg" alt="Богдан Яковлев">
               </div>
               <p class="experts-carousel__content person-card__content">
-                <span class="experts-carousel__post person-card__post">маммолог</span>
                 <b class="experts-carousel__name person-card__name">Богдан Яковлев</b>
+                <span class="experts-carousel__post person-card__post">маммолог</span>
               </p>
             </a>
           </div>
@@ -179,22 +219,22 @@
       </div>
       <ul class="advantages__list">
         <li class="advantages__item">
-          <img class="advantages__item-icon" src="images/svg-symbols/x.svg" alt="" width="96" height="96">
+          <img class="advantages__item-icon" src="images/icon-checklist.svg" alt="" width="96" height="96">
           <p class="advantages__item-caption"><em>Ценим доверие</em></p>
           <p class="advantages__item-description">Объясняем диагнозы и схему лечения, пишем разборчиво</p>
         </li>
         <li class="advantages__item">
-          <img class="advantages__item-icon" src="images/svg-symbols/x.svg" alt="" width="96" height="96">
+          <img class="advantages__item-icon" src="images/icon-charity.svg" alt="" width="96" height="96">
           <p class="advantages__item-caption"><em>Опыт 15 лет</em></p>
           <p class="advantages__item-description">Заботимся о здоровье глаз взрослых и детей</p>
         </li>
         <li class="advantages__item">
-          <img class="advantages__item-icon" src="images/svg-symbols/x.svg" alt="" width="96" height="96">
+          <img class="advantages__item-icon" src="images/icon-doctor.svg" alt="" width="96" height="96">
           <p class="advantages__item-caption"><em>12 докторов</em></p>
           <p class="advantages__item-description">Врачи офтальмологи и офтальмохирурги</p>
         </li>
         <li class="advantages__item">
-          <img class="advantages__item-icon" src="images/svg-symbols/x.svg" alt="" width="96" height="96">
+          <img class="advantages__item-icon" src="images/icon-hospital.svg" alt="" width="96" height="96">
           <p class="advantages__item-caption"><em>Удобное расположение</em></p>
           <p class="advantages__item-description">Стараемся быть ближе к нашим пациентам</p>
         </li>
@@ -213,8 +253,13 @@
       <ul class="preview-reviews__carousel preview-reviews-carousel" data-preview-reviews-carousel>
         <li class="preview-reviews-carousel__item preview-review">
           <blockquote class="preview-review__content">
-            <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
-            <cite class="preview-review__author-name">Ольга</cite>
+            <div class="preview-review__author">
+              <img class="preview-review__author-photo" src="https://uinames.com/api/photos/female/11.jpg" alt="Ольга Савинa">
+              <p class="preview-review__author-text">
+                <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
+                <cite class="preview-review__author-name">Ольга Савинa</cite>
+              </p>
+            </div>
             <p class="preview-review__text">
               Здравствуйте, Сергей Владимирович! Спасибо огромное, что посмотрели мои обследования и развеяли страхи. Думаю осенью-зимой поехать в Москву и проконтролировать у Вас свои глаза на предмет глаукомы. Пока капли помогают, отменять здесь не советуют. Вы лучший! Спасибо за Ваш труд и отзывчивость, за подаренное вновь зрение. И от…
             </p>
@@ -223,8 +268,13 @@
         </li>
         <li class="preview-reviews-carousel__item preview-review">
           <blockquote class="preview-review__content">
-            <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
-            <cite class="preview-review__author-name">Ольга</cite>
+            <div class="preview-review__author">
+              <img class="preview-review__author-photo" src="https://uinames.com/api/photos/female/9.jpg" alt="Елизавета Волковa">
+              <p class="preview-review__author-text">
+                <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
+                <cite class="preview-review__author-name">Елизавета Волковa</cite>
+              </p>
+            </div>
             <p class="preview-review__text">
               Здравствуйте, Сергей Владимирович! Спасибо огромное, что посмотрели мои обследования и развеяли страхи. Думаю осенью-зимой поехать в Москву и проконтролировать у Вас свои глаза на предмет глаукомы. Пока капли помогают, отменять здесь не советуют. Вы лучший! Спасибо за Ваш труд и отзывчивость, за подаренное вновь зрение. И от…
             </p>
@@ -233,8 +283,13 @@
         </li>
         <li class="preview-reviews-carousel__item preview-review">
           <blockquote class="preview-review__content">
-            <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
-            <cite class="preview-review__author-name">Ольга</cite>
+            <div class="preview-review__author">
+              <img class="preview-review__author-photo" src="https://uinames.com/api/photos/female/5.jpg" alt="Ирина Ульяновa">
+              <p class="preview-review__author-text">
+                <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
+                <cite class="preview-review__author-name">Ирина Ульяновa</cite>
+              </p>
+            </div>
             <p class="preview-review__text">
               Здравствуйте, Сергей Владимирович! Спасибо огромное, что посмотрели мои обследования и развеяли страхи. Думаю осенью-зимой поехать в Москву и проконтролировать у Вас свои глаза на предмет глаукомы. Пока капли помогают, отменять здесь не советуют. Вы лучший! Спасибо за Ваш труд и отзывчивость, за подаренное вновь зрение. И от…
             </p>
@@ -350,7 +405,7 @@
   </section>
 
   @@include('blocks/main-footer.html')
-
+  @@include('blocks/popup-callback.html')
   @@include('blocks/site-scripts.html')
 </body>
 

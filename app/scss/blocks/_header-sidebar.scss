@@ -3,15 +3,16 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 30px;
-  padding-top: 0;
+  padding-top: vh(12 * 2);
+  padding-bottom: vh(12 * 2);
   color: #ffffff;
-  background-color: rgba($accent-color, 0.8);
+  background-color: $accent-color;
   box-sizing: border-box;
 }
 
-.header-sidebar__main-nav {
-  margin-bottom: 15px;
-}
+// .header-sidebar__main-nav {
+//   margin-bottom: 15px;
+// }
 
 .header-sidebar__ask {
 

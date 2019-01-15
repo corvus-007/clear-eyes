@@ -24,7 +24,7 @@
   &:focus {
     color: #ffffff;
     background-color: $grey-63;
-    box-shadow: 0 0px 20px rgba($grey-63, 0.5);
+    box-shadow: 0 0px 20px rgba($grey-63, 0.25);
   }
 
   &:active {
@@ -76,8 +76,8 @@
   }
 
   @include mq-min(1024px) {
-    padding: vh(14) vh(20);
-    font-size: vh(14);
+    padding: vh(12) vh(20);
+    font-size: vh(15);
     line-height: vh(21);
   }
 }
