@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>О клинике</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <style>
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.3s;
+  }
+
+  .splash-screen--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .loading-spinner {
+    display: block;
+    height: 48px;
+    width: 48px;
+    border: 8px solid #49b7a8;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: rotate-forever 0.75s infinite linear;
+  }
+
+  @keyframes rotate-forever {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+</style>
+<div id="splash-screen" class="splash-screen">
+  <div class="splash-screen__item">
+    <div class="loading-spinner"></div>
+  </div>
+</div>
+
+
+  <div class="main-header__topbar topbar">
+    <div class="topbar__inner container">
+      <ul class="topbar__social social">
+        <li class="social__item">
+          <a class="topbar__social-link social__link" href="" target="_blank">
+            <svg class="topbar__social-icon social__icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#vk"></use>
+            </svg>
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="topbar__social-link social__link" href="" target="_blank">
+            <svg class="topbar__social-icon social__icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#facebook"></use>
+            </svg>
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="topbar__social-link social__link" href="" target="_blank">
+            <svg class="topbar__social-icon social__icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#instagram"></use>
+            </svg>
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="topbar__phones topbar-phones">
+        <li class="topbar-phones__item">
+          <a href="tel:+74951010177" class="topbar-phones__item-link">
+            <svg class="topbar-phones__item-icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#phone"></use>
+            </svg>
+            +7 (495) 101-01-77
+          </a>
+        </li>
+        <li class="topbar-phones__item">
+          <a href="tel:+74991301439" class="topbar-phones__item-link">
+            <svg class="topbar-phones__item-icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#phone"></use>
+            </svg>
+            +7 (499) 130-14-39
+          </a>
+        </li>
+      </ul>
+      <button class="topbar__to-callback" data-fancybox data-src="#popup-callback">Перезвоните мне</button>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="main-header__inner container">
+      <!-- <div class="main-header__sidebar header-sidebar">
+        <nav class="header-sidebar__main-nav main-nav">
+          <ul class="main-nav__menu menu">
+            <li class="menu-item current-menu-item"><a href="about-page.html">О клинике</a></li>
+            <li class="menu-item"><a href="services-page.html">Услуги и цены</a></li>
+            <li class="menu-item"><a href="">Специалисты</a></li>
+            <li class="menu-item"><a href="">Пациентам</a></li>
+            <li class="menu-item"><a href="">Документы</a></li>
+            <li class="menu-item"><a href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header-sidebar__ask header-ask">
+          <div class="header-ask__doctor-photo">
+            <img src="images/ask-doctor-photo.jpg" srcset="images/ask-doctor-photo@2x.jpg 2x" alt="Фотография доктора">
+          </div>
+          <p class="header-ask__caption">Задайте свой вопрос офтальмологу клиники</p>
+          <button class="header-ask__button button button--fill-white button--fluid" type="button">Задать вопрос</button>
+        </div>
+      </div> -->
+      <div class="main-header__logo">
+        <a href="index.html">
+          <img src="images/logo.svg" width="160" alt="Логотип офтальмологической клиники «Ясно Вижу»">
+        </a>
+      </div>
+      <!-- <div class="main-header__search header-search">
+        <button class="header-search__toggle button" type="button">
+          <svg class="header-search__toggle-icon button__icon" width="16" height="16">
+            <use xlink:href="images/symbols.svg#magnify"></use>
+          </svg>
+        </button>
+        <form class="header-search__form" action="" method="GET" autocomplete="off">
+          <input class="header-search__input input" type="search" name="q" placeholder="Поиск по сайту" minlength="3" required>
+          <button class="header-search__submit" type="submit">
+            <svg class="header-search__submit-icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#magnify"></use>
+            </svg>
+            <span class="visually-hidden">Искать</span>
+          </button>
+        </form>
+      </div> -->
+      <nav class="main-header__main-nav main-nav">
+        <ul class="main-nav__menu menu">
+          <li class="menu-item current-menu-item"><a href="about-page.html">О клинике</a></li>
+          <li class="menu-item"><a href="services-page.html">Услуги и цены</a></li>
+          <li class="menu-item"><a href="">Специалисты</a></li>
+          <li class="menu-item"><a href="">Пациентам</a></li>
+          <li class="menu-item"><a href="">Документы</a></li>
+          <li class="menu-item"><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+      <!-- <ul class="main-header__actions header-actions">
+        <li class="header-actions__item">
+          <button class="header-actions__button button" type="button">
+            <span class="header-actions__button-text">Написать</span>
+            <svg class="header-actions__button-icon button__icon button__icon--right" width="16" height="16">
+              <use xlink:href="images/symbols.svg#x"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="header-actions__item">
+          <button class="header-actions__button button" type="button">
+            <span class="header-actions__button-text">Онлайн запись</span>
+            <svg class="header-actions__button-icon button__icon button__icon--right" width="16" height="16">
+              <use xlink:href="images/symbols.svg#x"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="header-actions__item">
+          <button class="header-actions__button button" type="button">
+            <span class="header-actions__button-text">Перезвоните мне</span>
+            <svg class="header-actions__button-icon button__icon button__icon--right" width="16" height="16">
+              <use xlink:href="images/symbols.svg#x"></use>
+            </svg>
+          </button>
+        </li>
+      </ul> -->
+      <button class="main-header__to-appointment button">Записаться на прием</button>
+      <button class="main-header__cover-toggle out-cover-toggle">
+        <span class="out-cover-toggle__line"></span>
+        <span class="visually-hidden">Показать меню</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="first-screen-section about-first-screen first-screen-section--has-overlay common-section" style="background-image: url(images/bg-about-first-screen.jpg);">
+      <div class="first-screen-section__inner container">
+        <div class="first-screen-section__content">
+          <div class="first-screen-section__header common-section__header">
+            <h2 class="common-title">Офтальмологическая клиника ЯСНО ВИЖУ</h2>
+          </div>
+          <div class="common-text">
+            <p>
+              Два ведущих хирурга-офтальмолога России - Антонюк Сергей Владимирович и Иванов Иван Иванович в своем совместном проекте, опираясь на колоссальный опыт работы, создали "Офтальмологическую клинику ЯСНО ВИЖУ" на базе последних достижений российской и мировой офтальмологии.
+            </p>
+            <p>
+              Полный спектр современных мировых технологий, новейшее оборудование, собственные запатентованные методики лечения и сильнейшая команда профессионалов позволяют проводить лечение даже в самых сложных случаях.
+            </p>
+          </div>
+          <ul class="about-first-screen__actions">
+            <li class="about-first-screen__actions-item">
+              <button class="about-first-screen__button button button--outline-white" type="button">Заказать звонок</button>
+            </li>
+            <li class="about-first-screen__actions-item">
+              <button class="about-first-screen__button button" type="button">Записаться на прием</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <section class="common-section environment">
+      <div class="container">
+        <div class="common-section__header">
+          <h2 class="common-title">Врачи «Офтальмологической клиники ЯСНО ВИЖУ» оказывают помощь по всем направлением офтальмологии</h2>
+        </div>
+        <div class="common-text">
+          <p>Цены на медицинские услуги не превышают стоимость в других московских клиниках, а качество медицинских услуг соответствует современным мировым стандартам и последним требованиям времени.</p>
+          <p>На 1000 квадратных метрах нового светлого пространства клиники, созданного по специальному проекту, с учётом максимально высоких стандартов современной медицины, размещаются просторные кабинеты, оснащенные всем самым передовым оборудованием для диагностики зрения, новейшие лазерные операционные, комнаты отдыха, уютные помещения с удобными диванами для комфорта посетителей.</p>
+        </div>
+        <ul class="environment-carousel" data-environment-carousel>
+          <li class="environment-carousel__item environment-slide">
+            <a class="environment-slide__wraplink" href="images/environment-slides/01.jpg" data-fancybox="gallery-environment">
+            <div class="environment-slide__picture">
+              <img src="images/environment-slides/01.jpg" alt="Слайд 1">
+            </div>
+          </a>
+          </li>
+          <li class="environment-carousel__item environment-slide">
+            <a class="environment-slide__wraplink" href="images/environment-slides/02.jpg" data-fancybox="gallery-environment">
+            <div class="environment-slide__picture">
+              <img src="images/environment-slides/02.jpg" alt="Слайд 2">
+            </div>
+          </a>
+          </li>
+          <li class="environment-carousel__item environment-slide">
+            <a class="environment-slide__wraplink" href="images/environment-slides/01.jpg" data-fancybox="gallery-environment">
+            <div class="environment-slide__picture">
+              <img src="images/environment-slides/01.jpg" alt="Слайд 3">
+            </div>
+          </a>
+          </li>
+          <li class="environment-carousel__item environment-slide">
+            <a class="environment-slide__wraplink" href="images/environment-slides/02.jpg" data-fancybox="gallery-environment">
+            <div class="environment-slide__picture">
+              <img src="images/environment-slides/02.jpg" alt="Слайд 4">
+            </div>
+          </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="common-section examples-environment">
+      <div class="container">
+        <div class="common-section__header">
+          <h2 class="common-title">Некоторые примеры оборудования «Офтальмологической клиники ЯСНО ВИЖУ»:</h2>
+        </div>
+        <ul class="examples-environment__list">
+          <li class="examples-environment__item">
+            <img class="examples-environment__item-icon" src="images/svg-symbols/x.svg" alt="" width="94">
+            <p class="examples-environment__item-description">Система офтальмологическая хирургическая Constellation® Vision System</p>
+          </li>
+          <li class="examples-environment__item">
+            <img class="examples-environment__item-icon" src="images/svg-symbols/x.svg" alt="" width="94">
+            <p class="examples-environment__item-description">Операционный стереомикроскоп модели Hi-R 900 с системой визуализации глазного дна</p>
+          </li>
+          <li class="examples-environment__item">
+            <img class="examples-environment__item-icon" src="images/svg-symbols/x.svg" alt="" width="94">
+            <p class="examples-environment__item-description">Спектральный оптический когерентный томограф REVO nx SOCT Copernicus REVO с функцией пахиметрии, оптической биометрии, ангиоОСТ</p>
+          </li>
+          <li class="examples-environment__item">
+            <img class="examples-environment__item-icon" src="images/svg-symbols/x.svg" alt="" width="94">
+            <p class="examples-environment__item-description">Аппарат наркозный STEPHAN Portec (Концентратор кислородный медицинский Staxel)</p>
+          </li>
+          <li class="examples-environment__item">
+            <img class="examples-environment__item-icon" src="images/svg-symbols/x.svg" alt="" width="94">
+            <p class="examples-environment__item-description">Аппарат лазерный диодный медицинский "АЛОД-01"</p>
+          </li>
+          <li class="examples-environment__item">
+            <img class="examples-environment__item-icon" src="images/svg-symbols/x.svg" alt="" width="94">
+            <p class="examples-environment__item-description">Система офтальмологическая лазерная комбинированная OptoYag SLT; YAG лазерный модуль</p>
+          </li>
+        </ul>
+        <div class="examples-environment__text common-text">
+          <p>Квалифицированный персонал, доброжелательная атмосфера, новейшее оборудование, делают лечение не только успешным, но и комфортным для пациентов</p>
+        </div>
+      </div>
+    </section>
+    <section class="common-section certificates certificates--version-2">
+      <div class="container">
+        <div class="certificates__header common-section__header">
+          <h2 class="certificates__title common-title">Лицензии</h2>
+        </div>
+        <ul class="certificates__carousel certificates-carousel" data-certificates-carousel>
+          <li class="certificates-carousel__item certificates__item">
+            <a href="images/certificates-slides/01.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/01.jpg" alt="Слайд 1">
+            </div>
+          </a>
+          </li>
+          <li class="certificates-carousel__item certificates__item">
+            <a href="images/certificates-slides/02.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/02.jpg" alt="Слайд 2">
+            </div>
+          </a>
+          </li>
+          <li class="certificates-carousel__item certificates__item">
+            <a href="images/certificates-slides/03.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/03.jpg" alt="Слайд 3">
+            </div>
+          </a>
+          </li>
+          <li class="certificates-carousel__item certificates__item">
+            <a href="images/certificates-slides/01.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/01.jpg" alt="Слайд 4">
+            </div>
+          </a>
+          </li>
+          <li class="certificates-carousel__item certificates__item">
+            <a href="images/certificates-slides/02.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/02.jpg" alt="Слайд 5">
+            </div>
+          </a>
+          </li>
+          <li class="certificates-carousel__item certificates__item">
+            <a href="images/certificates-slides/03.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
+            <div class="certificates__item-picture">
+              <img src="images/certificates-slides/03.jpg" alt="Слайд 6">
+            </div>
+          </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="main-footer__wrapper">
+        <div class="main-footer__row main-footer__row--top">
+          <div class="main-footer__column main-footer__column--top">
+            <img class="main-footer__logo" src="images/logo-white.svg" alt="Логотип офтальмологической клиники «Ясно Вижу»" width="160">
+          </div>
+          <div class="main-footer__column main-footer__column--top">
+            <ul class="main-footer__list main-footer__phones-list">
+              <li>
+                <a href="tel:+74951010177">+7 (495) 101-01-77</a>
+              </li>
+              <li>
+                <a href="tel:+74991301439">+7 (499) 130-14-39</a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-footer__column main-footer__column--top">
+            <ul class="main-footer__social social">
+              <li class="social__item">
+                <a class="main-footer__social-link social__link" href="" target="_blank">
+                  <svg class="social__icon" width="16" height="16">
+                    <use xlink:href="images/symbols.svg#vk"></use>
+                  </svg>
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="main-footer__social-link social__link" href="" target="_blank">
+                  <svg class="social__icon" width="16" height="16">
+                    <use xlink:href="images/symbols.svg#facebook"></use>
+                  </svg>
+                  <span class="visually-hidden">Facebook</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="main-footer__social-link social__link" href="" target="_blank">
+                  <svg class="social__icon" width="16" height="16">
+                    <use xlink:href="images/symbols.svg#instagram"></use>
+                  </svg>
+                  <span class="visually-hidden">Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-footer__row main-footer__row--bottom">
+          <div class="main-footer__column main-footer__column--bottom">
+            <span class="main-footer__caption" aria-hidden="true">&nbsp;</span>
+            <ul class="main-footer__list">
+              <li><a href="">Клиники</a></li>
+              <li><a href="">Специалисты</a></li>
+              <li><a href="">Услуги</a></li>
+              <li><a href="">Контакты</a></li>
+              <li><a href="">Политика конфиденциальности</a></li>
+              <li><a href="">Отзывы пациентов</a></li>
+            </ul>
+          </div>
+          <div class="main-footer__column main-footer__column--bottom">
+            <b class="main-footer__caption">Информация</b>
+            <ul class="main-footer__list">
+              <li><a href="">Правила предоставления платных медицинских услуг</a></li>
+              <li><a href="">Лицензии на медицинскую деятельность</a></li>
+              <li><a href="">Полный прайс-лист</a></li>
+              <li><a href="">Вышестоящие и контролирующие органы</a></li>
+              <li><a href="">Документы</a></li>
+            </ul>
+          </div>
+          <div class="main-footer__column main-footer__column--bottom">
+            <b class="main-footer__caption">Обратная связь</b>
+            <ul class="main-footer__list">
+              <li><a href="">Вопрос в клиентский отдел</a></li>
+              <li><a href="">Оставить отзыв</a></li>
+              <li><a href="">Сотрудничество</a></li>
+              <li><a href="">Карьера</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="out-cover">
+    <div class="out-cover__inner">
+      <div class="out-cover__body">
+        <div class="out-cover__mobile-nav mobile-nav">
+          <ul class="mobile-nav__list">
+            <li class="current-menu-item"><a href="">Тарифы</a></li>
+            <li><a href="">Акции и новости</a></li>
+            <li><a href="">О компании</a></li>
+            <li><a href="">Для бизнеса</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="out-cover__footer container">
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/modules.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

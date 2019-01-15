@@ -1,7 +1,0 @@
-.common-text {
-  font-size: 20px;
-
-  @include mq-min(1024px) {
-    font-size: vh(18);
-  }
-}
