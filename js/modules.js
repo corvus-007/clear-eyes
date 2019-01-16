@@ -136,6 +136,7 @@ window.map = (function (window, $) {
   'use strict';
 
   var dirname = window.util.isDevMode() ? '' : '/wp-content/themes/trk/';
+    dirname = '';
 
   var mapElem = document.querySelector('#contact-map');
 

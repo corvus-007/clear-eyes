@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
     speed: 700,
     arrows: false,
     dots: true,
-    autoplay: true
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: false
   });
 
   $('[data-about-clinic-slider]').slick({
