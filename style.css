@@ -2856,6 +2856,7 @@ td > :last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  left: 0;
   width: 100%;
   min-height: 100vh;
   padding-top: calc(127px + 68px + 0px);
@@ -2875,8 +2876,6 @@ td > :last-child {
 @media (min-width: 1024px) {
   .intro__content {
     padding-top: calc(40px + 95px + 0px);
-    padding-left: 15px;
-    padding-right: 15px;
     height: 100vh;
   }
 }
