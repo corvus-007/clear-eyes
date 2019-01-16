@@ -2776,6 +2776,7 @@ td > :last-child {
 @media (min-width: 1024px) {
   .menu a {
     font-size: 2vh;
+    padding: 6px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 100px;
