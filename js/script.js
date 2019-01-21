@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     centerMode: true,
     slidesToShow: 3,
     centerPadding: '0',
+    // infinite: false,
     responsive: [{
       breakpoint: 770,
       settings: {

@@ -152,7 +152,7 @@
         <ul class="main-nav__menu menu">
           <li class="menu-item current-menu-item"><a href="about-page.html">О клинике</a></li>
           <li class="menu-item"><a href="services-page.html">Услуги и цены</a></li>
-          <li class="menu-item"><a href="">Специалисты</a></li>
+          <li class="menu-item"><a href="doctors-page.html">Специалисты</a></li>
           <li class="menu-item"><a href="">Пациентам</a></li>
           <li class="menu-item"><a href="">Документы</a></li>
           <li class="menu-item"><a href="">Контакты</a></li>
@@ -751,10 +751,11 @@
       <div class="out-cover__body">
         <div class="out-cover__mobile-nav mobile-nav">
           <ul class="mobile-nav__list">
-            <li class="current-menu-item"><a href="">Тарифы</a></li>
-            <li><a href="">Акции и новости</a></li>
-            <li><a href="">О компании</a></li>
-            <li><a href="">Для бизнеса</a></li>
+            <li class="current-menu-item"><a href="">О клинике</a></li>
+            <li><a href="">Услуги и цены</a></li>
+            <li><a href="">Специалисты</a></li>
+            <li><a href="">Пациентам</a></li>
+            <li><a href="">Документы</a></li>
             <li><a href="">Контакты</a></li>
           </ul>
         </div>
@@ -763,6 +764,28 @@
 
       </div>
     </div>
+  </div>
+
+  <div id="popup-callback" class="popup popup-callback" hidden>
+    <div class="popup__title">Обратный&nbsp;звонок</div>
+    <form class="form callback-form" action="" method="post">
+      <label class="field">
+        <span class="field__label visually-hidden">Ваше имя</span>
+        <div class="field__control">
+          <input type="text" name="username" class="input" placeholder="Ваше имя" required>
+        </div>
+      </label>
+      <label class="field">
+        <span class="field__label visually-hidden">Ваш телефон</span>
+        <div class="field__control">
+          <input type="tel" name="userphone" class="input" placeholder="Ваш телефон" required>
+        </div>
+      </label>
+
+      <div class="form-submit-wrapper">
+        <button class="button form-submit" type="sumbit">Да, позвоните мне</button>
+      </div>
+    </form>
   </div>
 
 
