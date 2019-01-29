@@ -104,12 +104,18 @@ body {
 
 @media (min-width: 1600px) {
   .container {
-    max-width: calc(1440px + 30px);
+    max-width: calc(1280px + 30px);
   }
 }
 
 .container--slim {
-  max-width: 900px;
+  max-width: 960px;
+}
+
+@media (min-width: 1600px) {
+  .container--slim {
+    max-width: 1150px;
+  }
 }
 
 .site-link {
@@ -1190,7 +1196,7 @@ body.compensate-for-scrollbar {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-width: 220px;
+  min-width: 200px;
   padding: 15px 20px;
   font-weight: 500;
   font-size: 15px;
@@ -4578,7 +4584,7 @@ td > :last-child {
 
 @media (min-width: 568px) {
   .doctors {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   }
 }
 
