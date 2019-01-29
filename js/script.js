@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
   $.fancybox.defaults.transitionEffect = 'zoom-in-out';
   $.fancybox.defaults.transitionDuration = 600;
 
+  $('.common-tabs').tabslet({
+    animation: true
+  });
+
   $('input[type="tel"]').inputmask({
     "mask": "+7 (999) 999-99-99"
   });

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Пациентам</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <style>
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.3s;
+  }
+
+  .splash-screen--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .loading-spinner {
+    display: block;
+    height: 48px;
+    width: 48px;
+    border: 8px solid #49b7a8;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: rotate-forever 0.75s infinite linear;
+  }
+
+  @keyframes rotate-forever {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+</style>
+<div id="splash-screen" class="splash-screen">
+  <div class="splash-screen__item">
+    <div class="loading-spinner"></div>
+  </div>
+</div>
+
+
+  <div class="main-header__topbar topbar">
+    <div class="topbar__inner container">
+      <ul class="topbar__social social">
+        <li class="social__item">
+          <a class="topbar__social-link social__link" href="" target="_blank">
+            <svg class="topbar__social-icon social__icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#vk"></use>
+            </svg>
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="topbar__social-link social__link" href="" target="_blank">
+            <svg class="topbar__social-icon social__icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#facebook"></use>
+            </svg>
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="topbar__social-link social__link" href="" target="_blank">
+            <svg class="topbar__social-icon social__icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#instagram"></use>
+            </svg>
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="topbar__phones topbar-phones">
+        <li class="topbar-phones__item">
+          <a href="tel:+74951010177" class="topbar-phones__item-link">
+            <svg class="topbar-phones__item-icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#phone"></use>
+            </svg>
+            +7 (495) 101-01-77
+          </a>
+        </li>
+        <li class="topbar-phones__item">
+          <a href="tel:+74991301439" class="topbar-phones__item-link">
+            <svg class="topbar-phones__item-icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#phone"></use>
+            </svg>
+            +7 (499) 130-14-39
+          </a>
+        </li>
+      </ul>
+      <button class="topbar__to-callback" data-fancybox data-src="#popup-callback">Перезвоните мне</button>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="main-header__inner container">
+      <!-- <div class="main-header__sidebar header-sidebar">
+        <nav class="header-sidebar__main-nav main-nav">
+          <ul class="main-nav__menu menu">
+            <li class="menu-item current-menu-item"><a href="about-page.html">О клинике</a></li>
+            <li class="menu-item"><a href="services-page.html">Услуги и цены</a></li>
+            <li class="menu-item"><a href="">Специалисты</a></li>
+            <li class="menu-item"><a href="">Пациентам</a></li>
+            <li class="menu-item"><a href="">Документы</a></li>
+            <li class="menu-item"><a href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header-sidebar__ask header-ask">
+          <div class="header-ask__doctor-photo">
+            <img src="images/ask-doctor-photo.jpg" srcset="images/ask-doctor-photo@2x.jpg 2x" alt="Фотография доктора">
+          </div>
+          <p class="header-ask__caption">Задайте свой вопрос офтальмологу клиники</p>
+          <button class="header-ask__button button button--fill-white button--fluid" type="button">Задать вопрос</button>
+        </div>
+      </div> -->
+      <div class="main-header__logo">
+        <a href="index.html">
+          <img src="images/logo.svg" width="160" alt="Логотип офтальмологической клиники «Ясно Вижу»">
+        </a>
+      </div>
+      <!-- <div class="main-header__search header-search">
+        <button class="header-search__toggle button" type="button">
+          <svg class="header-search__toggle-icon button__icon" width="16" height="16">
+            <use xlink:href="images/symbols.svg#magnify"></use>
+          </svg>
+        </button>
+        <form class="header-search__form" action="" method="GET" autocomplete="off">
+          <input class="header-search__input input" type="search" name="q" placeholder="Поиск по сайту" minlength="3" required>
+          <button class="header-search__submit" type="submit">
+            <svg class="header-search__submit-icon" width="16" height="16">
+              <use xlink:href="images/symbols.svg#magnify"></use>
+            </svg>
+            <span class="visually-hidden">Искать</span>
+          </button>
+        </form>
+      </div> -->
+      <nav class="main-header__main-nav main-nav">
+        <ul class="main-nav__menu menu">
+          <li class="menu-item current-menu-item"><a href="about-page.html">О клинике</a></li>
+          <li class="menu-item"><a href="services-page.html">Услуги и цены</a></li>
+          <li class="menu-item"><a href="doctors-page.html">Специалисты</a></li>
+          <li class="menu-item"><a href="patient-page.html">Пациентам</a></li>
+          <li class="menu-item"><a href="documents-page.html">Документы</a></li>
+          <li class="menu-item"><a href="contact-page.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <!-- <ul class="main-header__actions header-actions">
+        <li class="header-actions__item">
+          <button class="header-actions__button button" type="button">
+            <span class="header-actions__button-text">Написать</span>
+            <svg class="header-actions__button-icon button__icon button__icon--right" width="16" height="16">
+              <use xlink:href="images/symbols.svg#x"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="header-actions__item">
+          <button class="header-actions__button button" type="button">
+            <span class="header-actions__button-text">Онлайн запись</span>
+            <svg class="header-actions__button-icon button__icon button__icon--right" width="16" height="16">
+              <use xlink:href="images/symbols.svg#x"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="header-actions__item">
+          <button class="header-actions__button button" type="button">
+            <span class="header-actions__button-text">Перезвоните мне</span>
+            <svg class="header-actions__button-icon button__icon button__icon--right" width="16" height="16">
+              <use xlink:href="images/symbols.svg#x"></use>
+            </svg>
+          </button>
+        </li>
+      </ul> -->
+      <button class="main-header__to-appointment button">Записаться на прием</button>
+      <button class="main-header__cover-toggle out-cover-toggle">
+        <span class="out-cover-toggle__line"></span>
+        <span class="visually-hidden">Показать меню</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main main-patient">
+    <div class="first-screen-section about-first-screen first-screen-section--has-overlay common-section" style="background-image: url(images/bg-patient-first-screen.jpg);">
+      <div class="first-screen-section__inner container">
+        <div class="first-screen-section__content">
+          <div class="first-screen-section__header common-section__header">
+            <h2 class="common-title">Пациентам</h2>
+          </div>
+          <div class="common-text">
+            <p>В данном разделе Вы найдете полезные статьи о лечении глазных болезней, памятки перед походом к врачу офтальмологу, а также списки анализов требующихся для посещения врача</p>
+          </div>
+          <ul class="about-first-screen__actions">
+            <li class="about-first-screen__actions-item">
+              <button class="about-first-screen__button button button--outline-white" type="button">Заказать звонок</button>
+            </li>
+            <li class="about-first-screen__actions-item">
+              <button class="about-first-screen__button button" type="button">Записаться на прием</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="common-section">
+      <div class="container">
+        <div class="product-tabs common-tabs">
+          <ul class="common-tabs__menu">
+            <li class="common-tabs__item">
+              <a href="#tab-1" class="common-tabs__link">Лечение глазных болезней</a>
+            </li>
+            <li class="common-tabs__item">
+              <a href="#tab-2" class="common-tabs__link">Памятки</a>
+            </li>
+            <li class="common-tabs__item">
+              <a href="#tab-3" class="common-tabs__link">Список анализов</a>
+            </li>
+          </ul>
+          <div class="common-tabs__pane" id="tab-1">
+            <section class="product__description">
+              <h2 class="visually-hidden">Лечение глазных болезней</h2>
+              <ul class="patient-articles-cards">
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/photo-1548428710-49085e448098?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/photo-1548436516-926d477a021c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/photo-1541250628459-d8f2f0157289?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="common-tabs__pane" id="tab-2">
+            <section class="product__description">
+              <h2 class="visually-hidden">Лечение глазных болезней</h2>
+              <ul class="patient-articles-cards">
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/photo-1541250628459-d8f2f0157289?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/photo-1548436516-926d477a021c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li><li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/photo-1548428710-49085e448098?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="common-tabs__pane" id="tab-3">
+            <section class="product__description">
+              <h2 class="visually-hidden">Лечение глазных болезней</h2>
+              <ul class="patient-articles-cards">
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/photo-1548428710-49085e448098?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/photo-1541250628459-d8f2f0157289?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="patient-articles-cards__item patient-article-card">
+                  <a href="patient-article-page.html" class="patient-article-card__wraplink">
+                    <div class="patient-article-card__picture">
+                      <img src="https://images.unsplash.com/photo-1548436516-926d477a021c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" alt="">
+                    </div>
+                    <div class="patient-article-card__content">
+                      <h2 class="patient-article-card__title">Лечение глазной сетчатки</h2>
+                      <p class="patient-article-card__text">Сетчатка глаза – это внутренняя оболочка глазного яблока. Сетчатка – важный орган, во многом определяющий остроту и качество зрения. Ее структуру составляют нервные рецепторы и волокна, воспринимающие предметы окружающей действительности и свет…</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="main-footer__wrapper">
+        <div class="main-footer__row main-footer__row--top">
+          <div class="main-footer__column main-footer__column--top">
+            <img class="main-footer__logo" src="images/logo-white.svg" alt="Логотип офтальмологической клиники «Ясно Вижу»" width="160">
+          </div>
+          <div class="main-footer__column main-footer__column--top">
+            <ul class="main-footer__list main-footer__phones-list">
+              <li>
+                <a href="tel:+74951010177">+7 (495) 101-01-77</a>
+              </li>
+              <li>
+                <a href="tel:+74991301439">+7 (499) 130-14-39</a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-footer__column main-footer__column--top">
+            <ul class="main-footer__social social">
+              <li class="social__item">
+                <a class="main-footer__social-link social__link" href="" target="_blank">
+                  <svg class="social__icon" width="16" height="16">
+                    <use xlink:href="images/symbols.svg#vk"></use>
+                  </svg>
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="main-footer__social-link social__link" href="" target="_blank">
+                  <svg class="social__icon" width="16" height="16">
+                    <use xlink:href="images/symbols.svg#facebook"></use>
+                  </svg>
+                  <span class="visually-hidden">Facebook</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="main-footer__social-link social__link" href="" target="_blank">
+                  <svg class="social__icon" width="16" height="16">
+                    <use xlink:href="images/symbols.svg#instagram"></use>
+                  </svg>
+                  <span class="visually-hidden">Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-footer__row main-footer__row--bottom">
+          <div class="main-footer__column main-footer__column--bottom">
+            <span class="main-footer__caption" aria-hidden="true">&nbsp;</span>
+            <ul class="main-footer__list">
+              <li><a href="">Клиники</a></li>
+              <li><a href="doctors-page.html">Специалисты</a></li>
+              <li><a href="services-page.html">Услуги</a></li>
+              <li><a href="contact-page.html">Контакты</a></li>
+              <li><a href="privacy-policy-page.html">Политика конфиденциальности</a></li>
+              <li><a href="reviews-page.html">Отзывы пациентов</a></li>
+            </ul>
+          </div>
+          <div class="main-footer__column main-footer__column--bottom">
+            <b class="main-footer__caption">Информация</b>
+            <ul class="main-footer__list">
+              <li><a href="rules-page.html">Правила предоставления платных медицинских услуг</a></li>
+              <li><a href="">Лицензии на медицинскую деятельность</a></li>
+              <li><a href="">Полный прайс-лист</a></li>
+              <li><a href="supervisors-page.html">Вышестоящие и контролирующие органы</a></li>
+              <li><a href="documents-page.html">Документы</a></li>
+            </ul>
+          </div>
+          <div class="main-footer__column main-footer__column--bottom">
+            <b class="main-footer__caption">Обратная связь</b>
+            <ul class="main-footer__list">
+              <li><a href="">Вопрос в клиентский отдел</a></li>
+              <li><a href="">Оставить отзыв</a></li>
+              <li><a href="">Сотрудничество</a></li>
+              <li><a href="vacancy-page.html">Карьера</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="out-cover">
+    <div class="out-cover__inner">
+      <button class="out-cover__close out-cover-toggle out-cover-toggle--fired">
+        <span class="out-cover-toggle__line"></span>
+        <span class="visually-hidden">Показать меню</span>
+      </button>
+      <div class="out-cover__body">
+        <div class="out-cover__mobile-menu mobile-menu">
+          <ul class="mobile-menu__list">
+            <li class="current-menu-item"><a href="">О клинике</a></li>
+            <li><a href="">Услуги и цены</a></li>
+            <li><a href="">Специалисты</a></li>
+            <li><a href="">Пациентам</a></li>
+            <li><a href="">Документы</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="out-cover__footer container">
+        <ul class="out-cover__phones out-cover-phones">
+          <li class="out-cover-phones__item">
+            <a href="tel:+74951010177" class="out-cover-phones__item-link">
+              <svg class="out-cover-phones__item-icon" width="16" height="16">
+                <use xlink:href="images/symbols.svg#phone"></use>
+              </svg>
+              +7 (495) 101-01-77
+            </a>
+          </li>
+          <li class="out-cover-phones__item">
+            <a href="tel:+74991301439" class="out-cover-phones__item-link">
+              <svg class="out-cover-phones__item-icon" width="16" height="16">
+                <use xlink:href="images/symbols.svg#phone"></use>
+              </svg>
+              +7 (499) 130-14-39
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup-callback" class="popup popup-callback" hidden>
+    <div class="popup__title">Обратный&nbsp;звонок</div>
+    <form class="form callback-form" action="" method="post">
+      <label class="field">
+        <span class="field__label visually-hidden">Ваше имя</span>
+        <div class="field__control">
+          <input type="text" name="username" class="input" placeholder="Ваше имя" required>
+        </div>
+      </label>
+      <label class="field">
+        <span class="field__label visually-hidden">Ваш телефон</span>
+        <div class="field__control">
+          <input type="tel" name="userphone" class="input" placeholder="Ваш телефон" required>
+        </div>
+      </label>
+
+      <div class="form-submit-wrapper">
+        <button class="button form-submit" type="sumbit">Да, позвоните мне</button>
+      </div>
+    </form>
+  </div>
+
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/modules.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

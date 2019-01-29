@@ -154,9 +154,9 @@
           <li class="menu-item current-menu-item"><a href="about-page.html">О клинике</a></li>
           <li class="menu-item"><a href="services-page.html">Услуги и цены</a></li>
           <li class="menu-item"><a href="doctors-page.html">Специалисты</a></li>
-          <li class="menu-item"><a href="">Пациентам</a></li>
-          <li class="menu-item"><a href="">Документы</a></li>
-          <li class="menu-item"><a href="">Контакты</a></li>
+          <li class="menu-item"><a href="patient-page.html">Пациентам</a></li>
+          <li class="menu-item"><a href="documents-page.html">Документы</a></li>
+          <li class="menu-item"><a href="contact-page.html">Контакты</a></li>
         </ul>
       </nav>
       <!-- <ul class="main-header__actions header-actions">
@@ -331,7 +331,7 @@
       <div class="experts__header common-section__header">
         <h2 class="experts__title common-title">Наши специалисты</h2>
         <p class="experts-header__additional-side common-text">
-          <a class="site-link" href="">Все специалисты</a>
+          <a class="site-link" href="doctors-page.html">Все специалисты</a>
         </p>
         <p class="experts__intro common-text">Попасть в команду «Офтальмологическая клиника ЯСНО ВИЖУ» могут только лучшие врачи-офтальмологи с многолетней практикой и доказанным опытом. Наши офтальмологи не только лечат. Они помогают сохранить зрение и находят подход и к взрослым, и к детям</p>
       </div>
@@ -430,7 +430,7 @@
       <div class="preview-reviews__header common-section__header">
         <h2 class="preview-reviews__title common-title">Отзывы</h2>
         <p class="preview-reviews-header__additional-side common-text">
-          <a class="site-link" href="">Все отзывы</a>
+          <a class="site-link" href="reviews-page.html">Все отзывы</a>
         </p>
       </div>
       <ul class="preview-reviews__carousel preview-reviews-carousel" data-preview-reviews-carousel>
@@ -488,7 +488,7 @@
       <div class="certificates__header common-section__header">
         <h2 class="certificates__title common-title">Лицензии</h2>
         <p class="certificates-header__additional-side common-text">
-          <a class="site-link" href="">Все документы и лицензии</a>
+          <a class="site-link" href="documents-page.html">Все документы и лицензии</a>
         </p>
       </div>
       <ul class="certificates__carousel certificates-carousel" data-certificates-carousel>
@@ -638,21 +638,21 @@
             <span class="main-footer__caption" aria-hidden="true">&nbsp;</span>
             <ul class="main-footer__list">
               <li><a href="">Клиники</a></li>
-              <li><a href="">Специалисты</a></li>
-              <li><a href="">Услуги</a></li>
-              <li><a href="">Контакты</a></li>
-              <li><a href="">Политика конфиденциальности</a></li>
-              <li><a href="">Отзывы пациентов</a></li>
+              <li><a href="doctors-page.html">Специалисты</a></li>
+              <li><a href="services-page.html">Услуги</a></li>
+              <li><a href="contact-page.html">Контакты</a></li>
+              <li><a href="privacy-policy-page.html">Политика конфиденциальности</a></li>
+              <li><a href="reviews-page.html">Отзывы пациентов</a></li>
             </ul>
           </div>
           <div class="main-footer__column main-footer__column--bottom">
             <b class="main-footer__caption">Информация</b>
             <ul class="main-footer__list">
-              <li><a href="">Правила предоставления платных медицинских услуг</a></li>
+              <li><a href="rules-page.html">Правила предоставления платных медицинских услуг</a></li>
               <li><a href="">Лицензии на медицинскую деятельность</a></li>
               <li><a href="">Полный прайс-лист</a></li>
-              <li><a href="">Вышестоящие и контролирующие органы</a></li>
-              <li><a href="">Документы</a></li>
+              <li><a href="supervisors-page.html">Вышестоящие и контролирующие органы</a></li>
+              <li><a href="documents-page.html">Документы</a></li>
             </ul>
           </div>
           <div class="main-footer__column main-footer__column--bottom">
@@ -661,7 +661,7 @@
               <li><a href="">Вопрос в клиентский отдел</a></li>
               <li><a href="">Оставить отзыв</a></li>
               <li><a href="">Сотрудничество</a></li>
-              <li><a href="">Карьера</a></li>
+              <li><a href="vacancy-page.html">Карьера</a></li>
             </ul>
           </div>
         </div>
@@ -671,9 +671,13 @@
 
   <div class="out-cover">
     <div class="out-cover__inner">
+      <button class="out-cover__close out-cover-toggle out-cover-toggle--fired">
+        <span class="out-cover-toggle__line"></span>
+        <span class="visually-hidden">Показать меню</span>
+      </button>
       <div class="out-cover__body">
-        <div class="out-cover__mobile-nav mobile-nav">
-          <ul class="mobile-nav__list">
+        <div class="out-cover__mobile-menu mobile-menu">
+          <ul class="mobile-menu__list">
             <li class="current-menu-item"><a href="">О клинике</a></li>
             <li><a href="">Услуги и цены</a></li>
             <li><a href="">Специалисты</a></li>
@@ -684,7 +688,24 @@
         </div>
       </div>
       <div class="out-cover__footer container">
-
+        <ul class="out-cover__phones out-cover-phones">
+          <li class="out-cover-phones__item">
+            <a href="tel:+74951010177" class="out-cover-phones__item-link">
+              <svg class="out-cover-phones__item-icon" width="16" height="16">
+                <use xlink:href="images/symbols.svg#phone"></use>
+              </svg>
+              +7 (495) 101-01-77
+            </a>
+          </li>
+          <li class="out-cover-phones__item">
+            <a href="tel:+74991301439" class="out-cover-phones__item-link">
+              <svg class="out-cover-phones__item-icon" width="16" height="16">
+                <use xlink:href="images/symbols.svg#phone"></use>
+              </svg>
+              +7 (499) 130-14-39
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

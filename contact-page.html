@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
-  <title>О клинике</title>
+  <title>Контакы</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
@@ -193,159 +194,76 @@
   </header>
 
   <main class="main">
-    <div class="first-screen-section about-first-screen first-screen-section--has-overlay common-section" style="background-image: url(images/bg-about-first-screen.jpg);">
-      <div class="first-screen-section__inner container">
-        <div class="first-screen-section__content">
-          <div class="first-screen-section__header common-section__header">
-            <h2 class="common-title">Офтальмологическая клиника ЯСНО ВИЖУ</h2>
+    <article class="common-page contact">
+      <div class="container">
+        <div class="contact__content">
+          <header class="common-page__header">
+            <h1 class="common-page__title common-title">Контактная информация</h1>
+          </header>
+          <div class="common-page__body">
+            <div class="contact__info contact-info">
+              <div class="contact-info__section">
+                <h3 class="contact-info__title">Адрес</h3>
+                <span class="contact-info__value">Москва, ул. 3-я Нововатутинская дом 13, корпус 2</span>
+              </div>
+              <div class="contact-info__section">
+                <h3 class="contact-info__title">Телефон</h3>
+                <ul class="contact-info__list">
+                  <li class="contact-info__list-item">
+                    <a class="contact-info__value" href="tel:+74951010177">+7 (495) 101-01-77</a>
+                  </li>
+                  <li class="contact-info__list-item">
+                    <a class="contact-info__value" href="tel:+74991301439">+7 (499) 130-14-39</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="contact-info__section">
+                <h3 class="contact-info__title">Электронная почта</h3>
+                <ul class="contact-info__list">
+                  <li class="contact-info__list-item">
+                    <a class="contact-info__value" href="mailto:84951010177@mail.ru">84951010177@mail.ru</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="contact-info__section">
+                <h3 class="contact-info__title">График работы</h3>
+                <ul class="contact-info__value contact-work-time">
+                  <li class="contact-work-time__item">
+                    <span class="contact-work-time__key">Вт-Пт</span>
+                    <span class="contact-work-time__val">10:00–19:00</span>
+                  </li>
+                  <li class="contact-work-time__item">
+                    <span class="contact-work-time__key">Сб</span>
+                    <span class="contact-work-time__val">09:00–13:00</span>
+                  </li>
+                  <li class="contact-work-time__item">
+                    <span class="contact-work-time__key">Вс-Пн</span>
+                    <span class="contact-work-time__val">Выходной</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="contact-info__text">
+              <p>Единственный участник (генеральный директор) <br> ООО «Ясно Вижу» <b>Антонюк Сергей Владимирович</b></p>
+              <p>Директор Филиала глазной клиники ООО «Ясно Вижу» <br> <b>Антонюк Вероника Сергеевна</b></p>
+            </div>
+            <ul class="contact-info__actions">
+              <li class="contact-info__actions-item">
+                <button class="contact-info__button button button--outline-accent" type="button">Заказать звонок</button>
+              </li>
+              <li class="contact-info__actions-item">
+                <button class="contact-info__button button" type="button">Записаться на прием</button>
+              </li>
+            </ul>
+            <div class="contact__taxi-wrapper">
+              <script src="//yastatic.net/taxi-widget/ya-taxi-widget.js"></script>
+              <div class="ya-taxi-widget" data-use-location="true" data-size="s" data-theme="action" data-title="На такси в ТРК Клиник" data-point-a="" data-point-b="34.31736,53.273323" data-ref="http%3A%2F%2Flocalhost%3A3006%2F" data-proxy-url="https://3.redirect.appmetrica.yandex.com/route?start-lat={start-lat}&amp;start-lon={start-lon}&amp;end-lat={end-lat}&amp;end-lon={end-lon}&amp;ref={ref}&amp;appmetrica_tracking_id=1178268795219780156" data-description="Объездная улица, 32"></div>
+            </div>
           </div>
-          <div class="common-text">
-            <p>
-              Два ведущих хирурга-офтальмолога России - Антонюк Сергей Владимирович и Иванов Иван Иванович в своем совместном проекте, опираясь на колоссальный опыт работы, создали "Офтальмологическую клинику ЯСНО ВИЖУ" на базе последних достижений российской и мировой офтальмологии.
-            </p>
-            <p>
-              Полный спектр современных мировых технологий, новейшее оборудование, собственные запатентованные методики лечения и сильнейшая команда профессионалов позволяют проводить лечение даже в самых сложных случаях.
-            </p>
-          </div>
-          <ul class="about-first-screen__actions">
-            <li class="about-first-screen__actions-item">
-              <button class="about-first-screen__button button button--outline-white" type="button">Заказать звонок</button>
-            </li>
-            <li class="about-first-screen__actions-item">
-              <button class="about-first-screen__button button" type="button">Записаться на прием</button>
-            </li>
-          </ul>
         </div>
       </div>
-    </div>
-    <section class="common-section environment">
-      <div class="container">
-        <div class="common-section__header">
-          <h2 class="common-title">Врачи «Офтальмологической клиники ЯСНО ВИЖУ» оказывают помощь по всем направлением офтальмологии</h2>
-        </div>
-        <div class="common-text">
-          <p>Цены на медицинские услуги не превышают стоимость в других московских клиниках, а качество медицинских услуг соответствует современным мировым стандартам и последним требованиям времени.</p>
-          <p>На 1000 квадратных метрах нового светлого пространства клиники, созданного по специальному проекту, с учётом максимально высоких стандартов современной медицины, размещаются просторные кабинеты, оснащенные всем самым передовым оборудованием для диагностики зрения, новейшие лазерные операционные, комнаты отдыха, уютные помещения с удобными диванами для комфорта посетителей.</p>
-        </div>
-        <ul class="environment-carousel" data-environment-carousel>
-          <li class="environment-carousel__item environment-slide">
-            <a class="environment-slide__wraplink" href="images/environment-slides/01.jpg" data-fancybox="gallery-environment">
-            <div class="environment-slide__picture">
-              <img src="images/environment-slides/01.jpg" alt="Слайд 1">
-            </div>
-          </a>
-          </li>
-          <li class="environment-carousel__item environment-slide">
-            <a class="environment-slide__wraplink" href="images/environment-slides/02.jpg" data-fancybox="gallery-environment">
-            <div class="environment-slide__picture">
-              <img src="images/environment-slides/02.jpg" alt="Слайд 2">
-            </div>
-          </a>
-          </li>
-          <li class="environment-carousel__item environment-slide">
-            <a class="environment-slide__wraplink" href="images/environment-slides/01.jpg" data-fancybox="gallery-environment">
-            <div class="environment-slide__picture">
-              <img src="images/environment-slides/01.jpg" alt="Слайд 3">
-            </div>
-          </a>
-          </li>
-          <li class="environment-carousel__item environment-slide">
-            <a class="environment-slide__wraplink" href="images/environment-slides/02.jpg" data-fancybox="gallery-environment">
-            <div class="environment-slide__picture">
-              <img src="images/environment-slides/02.jpg" alt="Слайд 4">
-            </div>
-          </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="common-section examples-environment">
-      <div class="container">
-        <div class="common-section__header">
-          <h2 class="common-title">Некоторые примеры оборудования «Офтальмологической клиники ЯСНО ВИЖУ»:</h2>
-        </div>
-        <ul class="examples-environment__list">
-          <li class="examples-environment__item">
-            <img class="examples-environment__item-icon" src="images/examples-environment/01.svg" alt="" width="94">
-            <p class="examples-environment__item-description">Система офтальмологическая хирургическая Constellation® Vision System</p>
-          </li>
-          <li class="examples-environment__item">
-            <img class="examples-environment__item-icon" src="images/examples-environment/02.svg" alt="" width="94">
-            <p class="examples-environment__item-description">Операционный стереомикроскоп модели Hi-R 900 с системой визуализации глазного дна</p>
-          </li>
-          <li class="examples-environment__item">
-            <img class="examples-environment__item-icon" src="images/examples-environment/03.svg" alt="" width="94">
-            <p class="examples-environment__item-description">Спектральный оптический когерентный томограф REVO nx SOCT Copernicus REVO с функцией пахиметрии, оптической биометрии, ангиоОСТ</p>
-          </li>
-          <li class="examples-environment__item">
-            <img class="examples-environment__item-icon" src="images/examples-environment/04.svg" alt="" width="94">
-            <p class="examples-environment__item-description">Аппарат наркозный STEPHAN Portec (Концентратор кислородный медицинский Staxel)</p>
-          </li>
-          <li class="examples-environment__item">
-            <img class="examples-environment__item-icon" src="images/examples-environment/05.svg" alt="" width="94">
-            <p class="examples-environment__item-description">Аппарат лазерный диодный медицинский "АЛОД-01"</p>
-          </li>
-          <li class="examples-environment__item">
-            <img class="examples-environment__item-icon" src="images/examples-environment/06.svg" alt="" width="94">
-            <p class="examples-environment__item-description">Система офтальмологическая лазерная комбинированная OptoYag SLT; YAG лазерный модуль</p>
-          </li>
-        </ul>
-        <div class="examples-environment__text common-text">
-          <p>Квалифицированный персонал, доброжелательная атмосфера, новейшее оборудование, делают лечение не только успешным, но и комфортным для пациентов</p>
-        </div>
-      </div>
-    </section>
-    <section class="common-section certificates certificates--version-2">
-      <div class="container">
-        <div class="certificates__header common-section__header">
-          <h2 class="certificates__title common-title">Лицензии</h2>
-        </div>
-        <ul class="certificates__carousel certificates-carousel" data-certificates-carousel>
-          <li class="certificates-carousel__item certificates__item">
-            <a href="images/certificates-slides/01.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
-            <div class="certificates__item-picture">
-              <img src="images/certificates-slides/01.jpg" alt="Слайд 1">
-            </div>
-          </a>
-          </li>
-          <li class="certificates-carousel__item certificates__item">
-            <a href="images/certificates-slides/02.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
-            <div class="certificates__item-picture">
-              <img src="images/certificates-slides/02.jpg" alt="Слайд 2">
-            </div>
-          </a>
-          </li>
-          <li class="certificates-carousel__item certificates__item">
-            <a href="images/certificates-slides/03.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
-            <div class="certificates__item-picture">
-              <img src="images/certificates-slides/03.jpg" alt="Слайд 3">
-            </div>
-          </a>
-          </li>
-          <li class="certificates-carousel__item certificates__item">
-            <a href="images/certificates-slides/01.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
-            <div class="certificates__item-picture">
-              <img src="images/certificates-slides/01.jpg" alt="Слайд 4">
-            </div>
-          </a>
-          </li>
-          <li class="certificates-carousel__item certificates__item">
-            <a href="images/certificates-slides/02.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
-            <div class="certificates__item-picture">
-              <img src="images/certificates-slides/02.jpg" alt="Слайд 5">
-            </div>
-          </a>
-          </li>
-          <li class="certificates-carousel__item certificates__item">
-            <a href="images/certificates-slides/03.jpg" class="certificates__item-wraplink" data-fancybox="gallery-certificates">
-            <div class="certificates__item-picture">
-              <img src="images/certificates-slides/03.jpg" alt="Слайд 6">
-            </div>
-          </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <div class="contact__map" id="contact-map"></div>
+    </article>
   </main>
   <footer class="main-footer">
     <div class="container">
