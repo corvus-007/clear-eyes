@@ -68,9 +68,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }]
   });
 
+  if (document.querySelector('.reviews')) {
+    window.previewReview.init();
+  }
+
+  $('[data-preview-reviews-carousel]').on('init', function () {
+    window.previewReview.init();
+  });
+
   $('[data-preview-reviews-carousel]').slick({
     accessibility: false,
     slidesToShow: 2,
+    infinite: false,
+    adaptiveHeight: true,
     speed: 700,
     responsive: [{
         breakpoint: 770,
@@ -91,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     ]
   });
+
 
   // Init fancybox
   // =============
@@ -143,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }]
   });
-
 
 
   // Environment carousel
