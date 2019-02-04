@@ -1,0 +1,7 @@
+.patient-articles-cards {
+  @include clear-list();
+}
+
+.patient-articles-cards__item {
+  margin-bottom: 30px;
+}

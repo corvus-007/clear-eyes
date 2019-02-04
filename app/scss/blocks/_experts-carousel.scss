@@ -1,18 +1,9 @@
 .experts-carousel {
   @include clear-list();
 
-  .slick-track {
-    display: flex !important;
-    align-items: flex-start;
-
-    &::before,
-    &::after {
-      content: none;
-    }
-  }
-
   .slick-arrow {
-    top: 42.5%;
+    top: calc(50% - 51px);
+    transform: translateY(-25%);
   }
 
   .slick-prev {
@@ -28,39 +19,6 @@
   }
 }
 
-.experts-carousel__item {}
+.experts-carousel__item {
 
-.experts-carousel__photo {
-  max-width: 300px;
-  max-height: 300px;
-  transform: scale(0.67);
-  transition: $duration * 3;
-  will-change: transform;
-
-  .slick-center & {
-    transform: scale(1);
-    filter: none;
-  }
-
-  @include mq-min(1024px) {
-    max-width: vh(320);
-    max-height: vh(320);
-  }
-}
-
-.experts-carousel__content {
-  transform: translateY(-50px);
-  color: #808180;
-  font-weight: 400;
-  transition: $duration * 2;
-  will-change: transform;
-
-  .slick-center & {
-    transform: translateY(0);
-    color: $base-color;
-  }
-
-  @include mq-min(1024px) {
-    transform: translateY(vh(-50));
-  }
 }

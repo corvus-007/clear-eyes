@@ -20,6 +20,14 @@ body {
   @include make-container();
 }
 
+.container--slim {
+  max-width: 960px;
+
+  @include mq-min(1600px) {
+    max-width: 1150px;
+  }
+}
+
 .site-link {
   color: $accent-color;
   text-decoration: none;

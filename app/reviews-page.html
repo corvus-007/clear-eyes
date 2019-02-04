@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Отзывы</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+  @@include('blocks/main-header.html')
+  <main class="main">
+    <article class="common-page reviews">
+      <header class="common-page__header container container--slim">
+        <h1 class="common-page__title common-title">Отзывы</h1>
+      </header>
+      <div class="common-page__body container container--slim">
+        <ul class="reviews__list">
+          <li class="reviews__item preview-review">
+            <blockquote class="preview-review__content">
+              <div class="preview-review__author">
+                <img class="preview-review__author-photo" src="https://uinames.com/api/photos/female/11.jpg" alt="Ольга Савинa">
+                <p class="preview-review__author-text">
+                  <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
+                  <cite class="preview-review__author-name">Ольга Савинa</cite>
+                </p>
+              </div>
+              <p class="preview-review__text">
+                Здравствуйте, Сергей Владимирович! Спасибо огромное, что посмотрели мои обследования и развеяли страхи. Думаю осенью-зимой поехать в Москву и проконтролировать у Вас свои глаза на предмет глаукомы. Пока капли помогают, отменять здесь не советуют. Вы лучший! Спасибо за Ваш труд и отзывчивость, за подаренное вновь зрение. И от…
+              </p>
+            </blockquote>
+            <!-- Кнопка создается динамически, если отзыв длинный -->
+            <!-- <button class="preview-review__to-full-review button button--outline-accent">Отзыв полностью</button> -->
+          </li>
+          <li class="reviews__item preview-review">
+            <blockquote class="preview-review__content">
+              <div class="preview-review__author">
+                <img class="preview-review__author-photo" src="https://uinames.com/api/photos/female/9.jpg" alt="Елизавета Волковa">
+                <p class="preview-review__author-text">
+                  <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
+                  <cite class="preview-review__author-name">Елизавета Волковa</cite>
+                </p>
+              </div>
+              <p class="preview-review__text">
+                Здравствуйте, Сергей Владимирович! Спасибо огромное, что посмотрели мои обследования и
+              </p>
+            </blockquote>
+          </li>
+          <li class="reviews__item preview-review">
+            <blockquote class="preview-review__content">
+              <div class="preview-review__author">
+                <img class="preview-review__author-photo" src="https://uinames.com/api/photos/female/5.jpg" alt="Ирина Ульяновa">
+                <p class="preview-review__author-text">
+                  <time class="preview-review__publication-date" datetime="2017-06-14">14 Июня 2017 </time>
+                  <cite class="preview-review__author-name">Ирина Ульяновa</cite>
+                </p>
+              </div>
+              <p class="preview-review__text">
+                Здравствуйте, Сергей Владимирович! Спасибо огромное, что посмотрели мои обследования и развеяли страхи. Думаю осенью-зимой поехать в Москву и проконтролировать у Вас свои глаза на предмет глаукомы. Пока капли помогают, отменять здесь не советуют. Вы лучший! Спасибо за Ваш труд и отзывчивость, за подаренное вновь зрение. И от…
+              </p>
+            </blockquote>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </main>
+  @@include('blocks/main-footer.html')
+  @@include('blocks/site-scripts.html')
+</body>
+
+</html>

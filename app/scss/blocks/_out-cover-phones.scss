@@ -1,0 +1,48 @@
+.out-cover-phones {
+  @include clear-list();
+
+  @include mq-min(568px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.out-cover-phones__item {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq-min(568px) {
+    margin-bottom: 0;
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.out-cover-phones__item-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 4px;
+  color: $base-color;
+  transition: $duration / 2;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.out-cover-phones__item-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  fill: currentColor;
+}

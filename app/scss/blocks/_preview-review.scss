@@ -3,6 +3,8 @@
   background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 5px;
+  box-shadow: 0 2px 16px rgba(#000000, 0.1);
+  border-radius: 10px;
 
   @include mq-min(1200px) {
     padding-left: 60px;
@@ -17,6 +19,7 @@
 
 .preview-review__publication-date {
   font-size: 14px;
+  color: $muted-color;
 }
 
 .preview-review__author {

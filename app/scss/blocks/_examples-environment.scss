@@ -36,7 +36,6 @@
 .examples-environment__item-icon {
   object-fit: contain;
   margin-bottom: 15px;
-  filter: invert(1);
 
   @include mq-min(1600px) {
     margin-bottom: 0;

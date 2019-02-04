@@ -12,6 +12,6 @@
   }
 
   @include mq-min(1600px) {
-    max-width: calc(1440px + #{$gutter});
+    max-width: calc(1280px + #{$gutter});
   }
 }

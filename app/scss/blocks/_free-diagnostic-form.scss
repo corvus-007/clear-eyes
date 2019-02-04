@@ -1,0 +1,45 @@
+.free-diagnostic-form {
+
+}
+
+.free-diagnostic-form__row {
+  @include mq-min(568px) {
+    display: flex;
+  }
+}
+
+.free-diagnostic-form__column {
+  @include mq-min(568px) {
+    width: 50%;
+    margin-right: 20px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.free-diagnostic-form__input {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  vertical-align: -20px;
+}
+
+.free-diagnostic-form__agree {
+  text-align: left;
+
+  a {
+    color: $accent-color;
+  }
+}
+
+.free-diagnostic-form__submit {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}

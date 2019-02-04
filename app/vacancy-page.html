@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Карьера</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+  @@include('blocks/main-header.html')
+  <main class="main">
+    <article class="common-page vacancy">
+      <header class="common-page__header container container--slim">
+        <h1 class="common-page__title common-title">Карьера</h1>
+        <p class="common-page__subtitle">Отправьте свое резюме</p>
+      </header>
+      <div class="common-page__body vacancy__list container container--slim">
+        <form class="vacancy-form" action="" method="POST">
+          <label class="field">
+            <span class="field__label">Ваше имя и фамилия</span>
+            <input class="field__input input" type="text" name="vacancy_name" placeholder="" required>
+          </label>
+          <div class="vacancy-form__row">
+            <label class="vacancy-form__column field">
+              <span class="field__label">Номер телефона</span>
+              <input class="field__input input" type="tel" name="vacancy_phone" placeholder="+7 (___) ___-__-__" required>
+            </label>
+            <label class="vacancy-form__column field">
+              <span class="field__label">E-mail</span>
+              <input class="field__input input" type="mail" name="vacancy_mail" placeholder="">
+            </label>
+          </div>
+          <label class="field">
+            <span class="field__label">Несколько слов о себе</span>
+            <textarea name="vacancy__message" rows="5" class="field__input input input--area" placeholder=""></textarea>
+          </label>
+
+          <p class="text-agree">Нажимая «Отправить», вы соглашаетесь с <a href="">Условиями и Правилами</a> компании</p>
+
+          <input class="button" type="submit" value="Отправить">
+        </form>
+      </div>
+    </article>
+  </main>
+  @@include('blocks/main-footer.html')
+  @@include('blocks/site-scripts.html')
+</body>
+
+</html>

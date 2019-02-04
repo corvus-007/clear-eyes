@@ -26,8 +26,9 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.2",
-    "slick-carousel": "^1.8.1",
     "inputmask": "^4.0.3",
-    "svg4everybody": "^2.1.9"
+    "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9",
+    "tabslet": "^1.7.3"
   }
 }

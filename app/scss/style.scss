@@ -25,13 +25,17 @@
 @import "blocks/slick-arrow";
 @import "blocks/slick-dots";
 @import "blocks/textual";
+@import "blocks/common-page";
+@import "blocks/common-tabs";
 @import "blocks/common-title";
 @import "blocks/common-text";
 @import "blocks/common-section";
+@import "blocks/download-attachments";
 // @import "blocks/custom-ol";
 // @import "blocks/custom-ul";
 @import "blocks/social";
-@import "blocks/person-card";
+// @import "blocks/person-card";
+@import "blocks/experts-slide-doctor";
 @import "blocks/topbar-phones";
 @import "blocks/topbar";
 @import "blocks/header-sidebar";
@@ -49,6 +53,7 @@
 @import "blocks/about-first-screen";
 @import "blocks/about-clinic-slider";
 @import "blocks/about-clinic";
+@import "blocks/free-diagnostic-form";
 @import "blocks/free-diagnostic";
 @import "blocks/experts-carousel";
 @import "blocks/experts";
@@ -66,6 +71,18 @@
 @import "blocks/environment";
 @import "blocks/examples-environment";
 @import "blocks/main-services";
+@import "blocks/doctors";
+@import "blocks/doctor-card";
+@import "blocks/doctor";
+@import "blocks/patient-articles-cards";
+@import "blocks/patient-article-card";
+@import "blocks/main-patient-article";
+@import "blocks/supervisor";
+@import "blocks/supervisors";
+@import "blocks/vacancy-form";
+@import "blocks/reviews";
+@import "blocks/mobile-menu";
+@import "blocks/out-cover-phones";
 
 
 // @import "blocks/page";

@@ -3,3 +3,4 @@
 //=require modules/out-cover.js
 //=require modules/header-search.js
 //=require modules/map.js
+//=require modules/preview-review.js

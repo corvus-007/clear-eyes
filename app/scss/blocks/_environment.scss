@@ -4,6 +4,9 @@
 
   @include mq-min(1024px) {
     background: linear-gradient(to top, $accent-color #{vh(60)}, transparent 0);
-
   }
+}
+
+.environment__carousel {
+  margin-top: $gutter * 2;
 }

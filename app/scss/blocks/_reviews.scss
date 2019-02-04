@@ -1,0 +1,11 @@
+.reviews {
+
+}
+
+.reviews__list {
+  @include clear-list();
+}
+
+.reviews__item {
+  margin-bottom: 50px;
+}

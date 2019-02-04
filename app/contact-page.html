@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Контакы</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+  @@include('blocks/main-header.html')
+  <main class="main">
+    <article class="common-page contact">
+      <div class="container">
+        <div class="contact__content">
+          <header class="common-page__header">
+            <h1 class="common-page__title common-title">Контактная информация</h1>
+          </header>
+          <div class="common-page__body">
+            <div class="contact__info contact-info">
+              <div class="contact-info__section">
+                <h3 class="contact-info__title">Адрес</h3>
+                <span class="contact-info__value">Москва, ул. 3-я Нововатутинская дом 13, корпус 2</span>
+              </div>
+              <div class="contact-info__section">
+                <h3 class="contact-info__title">Телефон</h3>
+                <ul class="contact-info__list">
+                  <li class="contact-info__list-item">
+                    <a class="contact-info__value" href="tel:+74951010177">+7 (495) 101-01-77</a>
+                  </li>
+                  <li class="contact-info__list-item">
+                    <a class="contact-info__value" href="tel:+74991301439">+7 (499) 130-14-39</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="contact-info__section">
+                <h3 class="contact-info__title">Электронная почта</h3>
+                <ul class="contact-info__list">
+                  <li class="contact-info__list-item">
+                    <a class="contact-info__value" href="mailto:84951010177@mail.ru">84951010177@mail.ru</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="contact-info__section">
+                <h3 class="contact-info__title">График работы</h3>
+                <ul class="contact-info__value contact-work-time">
+                  <li class="contact-work-time__item">
+                    <span class="contact-work-time__key">Вт-Пт</span>
+                    <span class="contact-work-time__val">10:00–19:00</span>
+                  </li>
+                  <li class="contact-work-time__item">
+                    <span class="contact-work-time__key">Сб</span>
+                    <span class="contact-work-time__val">09:00–13:00</span>
+                  </li>
+                  <li class="contact-work-time__item">
+                    <span class="contact-work-time__key">Вс-Пн</span>
+                    <span class="contact-work-time__val">Выходной</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="contact-info__text">
+              <p>Единственный участник (генеральный директор) <br> ООО «Ясно Вижу» <b>Антонюк Сергей Владимирович</b></p>
+              <p>Директор Филиала глазной клиники ООО «Ясно Вижу» <br> <b>Антонюк Вероника Сергеевна</b></p>
+            </div>
+            <ul class="contact-info__actions">
+              <li class="contact-info__actions-item">
+                <button class="contact-info__button button button--outline-accent" type="button">Заказать звонок</button>
+              </li>
+              <li class="contact-info__actions-item">
+                <button class="contact-info__button button" type="button">Записаться на прием</button>
+              </li>
+            </ul>
+            <div class="contact__taxi-wrapper">
+              <script src="//yastatic.net/taxi-widget/ya-taxi-widget.js"></script>
+              <div class="ya-taxi-widget" data-use-location="true" data-size="s" data-theme="action" data-title="На такси в ТРК Клиник" data-point-a="" data-point-b="34.31736,53.273323" data-ref="http%3A%2F%2Flocalhost%3A3006%2F" data-proxy-url="https://3.redirect.appmetrica.yandex.com/route?start-lat={start-lat}&amp;start-lon={start-lon}&amp;end-lat={end-lat}&amp;end-lon={end-lon}&amp;ref={ref}&amp;appmetrica_tracking_id=1178268795219780156" data-description="Объездная улица, 32"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact__map" id="contact-map"></div>
+    </article>
+  </main>
+  @@include('blocks/main-footer.html')
+  @@include('blocks/site-scripts.html')
+</body>
+
+</html>

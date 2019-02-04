@@ -18,6 +18,11 @@
     margin-top: 30px;
   }
 
+  .slick-track {
+    padding-top: 14px;
+    padding-bottom: 16px;
+  }
+
   @include mq-min(768px) {
     margin-left: 15px;
     margin-right: 15px;

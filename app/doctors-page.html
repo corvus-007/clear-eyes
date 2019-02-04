@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Врачи</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  @@include('blocks/main-header.html')
+  <main class="main main-doctors">
+    <div class="first-screen-section about-first-screen first-screen-section--has-overlay common-section" style="background-image: url(images/bg-doctors-first-screen.jpg);">
+      <div class="first-screen-section__inner container container--slim">
+        <div class="first-screen-section__content">
+          <div class="first-screen-section__header common-section__header">
+            <h2 class="common-title">Врачи</h2>
+          </div>
+          <div class="textual">
+            <p>В команду офтальмологов и узких специалистов «Офтальмологической клиники ЯСНО ВИЖУ» попадают лучшие врачи Москвы и Московской области.</p>
+            <p>В процессе диагностики быстро и точно определяется причина проблемы, а офтальмолог назначит схему лечения или профилактики</p>
+          </div>
+          <ul class="about-first-screen__actions">
+            <li class="about-first-screen__actions-item">
+              <button class="about-first-screen__button button button--outline-white" type="button">Заказать звонок</button>
+            </li>
+            <li class="about-first-screen__actions-item">
+              <button class="about-first-screen__button button" type="button">Записаться на прием</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="common-section">
+      <div class="container container--slim">
+        <div class="common-section__header">
+          <h2 class="common-title">Наши специалисты</h2>
+        </div>
+        <ul class="doctors">
+          <li class="doctors__item doctor-card">
+            <a class="doctor-card__wraplink" href="a-doctor-page.html">
+              <p class="doctor-card__photo">
+                <img src="images/doctors/antonyk-sv.jpg" alt="Антонюк Сергей Владимирович">
+              </p>
+              <p class="doctor-card__content">
+                <b class="doctor-card__name">Антонюк Сергей Владимирович</b>
+                <span class="doctor-card__post">Доктор медицинских наук, профессор. Офтальмолог — хирург высшей категории.</span>
+              </p>
+            </a>
+          </li>
+          <li class="doctors__item doctor-card">
+            <a class="doctor-card__wraplink" href="a-doctor-page.html">
+              <p class="doctor-card__photo">
+                <img src="images/doctors/antonyk-vs.jpg" alt="Антонюк Вероника Сергеевна">
+              </p>
+              <p class="doctor-card__content">
+                <b class="doctor-card__name">Антонюк Вероника Сергеевна</b>
+                <span class="doctor-card__post">Директор филиала</span>
+              </p>
+            </a>
+          </li>
+          <li class="doctors__item doctor-card">
+            <a class="doctor-card__wraplink" href="a-doctor-page.html">
+              <p class="doctor-card__photo">
+                <img src="images/doctors/fominuh_ea.jpg" alt="Фоминых Евгения Александровна">
+              </p>
+              <p class="doctor-card__content">
+                <b class="doctor-card__name">Фоминых Евгения Александровна</b>
+                <span class="doctor-card__post">Администратор клиники</span>
+              </p>
+            </a>
+          </li>
+
+          <li class="doctors__item doctor-card">
+            <a class="doctor-card__wraplink" href="a-doctor-page.html">
+              <p class="doctor-card__photo">
+                <img src="images/doctors/antonyk-sv.jpg" alt="Антонюк Сергей Владимирович">
+              </p>
+              <p class="doctor-card__content">
+                <b class="doctor-card__name">Антонюк Сергей Владимирович</b>
+                <span class="doctor-card__post">Доктор медицинских наук, профессор. Офтальмолог — хирург высшей категории.</span>
+              </p>
+            </a>
+          </li>
+          <li class="doctors__item doctor-card">
+            <a class="doctor-card__wraplink" href="a-doctor-page.html">
+              <p class="doctor-card__photo">
+                <img src="images/doctors/antonyk-vs.jpg" alt="Антонюк Вероника Сергеевна">
+              </p>
+              <p class="doctor-card__content">
+                <b class="doctor-card__name">Антонюк Вероника Сергеевна</b>
+                <span class="doctor-card__post">Директор филиала</span>
+              </p>
+            </a>
+          </li>
+          <li class="doctors__item doctor-card">
+            <a class="doctor-card__wraplink" href="a-doctor-page.html">
+              <p class="doctor-card__photo">
+                <img src="images/doctors/fominuh_ea.jpg" alt="Фоминых Евгения Александровна">
+              </p>
+              <p class="doctor-card__content">
+                <b class="doctor-card__name">Фоминых Евгения Александровна</b>
+                <span class="doctor-card__post">Администратор клиники</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  @@include('blocks/main-footer.html')
+  @@include('blocks/site-scripts.html')
+</body>
+
+</html>

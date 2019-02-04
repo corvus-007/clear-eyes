@@ -1,0 +1,24 @@
+.doctor {
+
+}
+
+.doctor__inner {
+  display: flex;
+}
+
+.doctor__photo {
+  @include make-fit-object(470, 615);
+
+  width: 400px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-right: $gutter * 2;
+
+  img {
+    object-position: top;
+  }
+}
+
+.doctor__text {
+
+}

@@ -1,0 +1,20 @@
+.vacancy-form {
+
+}
+
+.vacancy-form__row {
+  @include mq-min(568px) {
+    display: flex;
+  }
+}
+
+.vacancy-form__column {
+  @include mq-min(568px) {
+    width: 50%;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

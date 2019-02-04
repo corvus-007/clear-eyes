@@ -1,0 +1,65 @@
+.supervisor {
+
+}
+
+.supervisor__name {
+  max-width: 720px;
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+
+  a {
+    color: $base-color;
+    text-decoration: none;
+    transition: $duration;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.supervisor__info {
+
+}
+
+.supervisor__info-section {
+  margin-bottom: 20px;
+}
+
+.supervisor__info-caption {
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 18px;
+  color: $muted-color;
+}
+
+
+.supervisor__info-list {
+  @include clear-list();
+}
+
+.supervisor__info-value {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  color: $base-color;
+
+  a {
+    color: $base-color;
+    text-decoration: none;
+    transition: $duration;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  @include mq-range(667px, 767px) {
+    font-size: 15px;
+  }
+}

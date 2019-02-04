@@ -1,17 +1,27 @@
 .intro-slider {
-
   .slick-dots {
     position: absolute;
     bottom: 20px;
-    left: $gutter / 2;;
-    right: $gutter / 2;;
+    left: $gutter / 2;
+    right: $gutter / 2;
+
+    button {
+      background-color: #ffffff;
+    }
+
+    .slick-active button {
+      border-color: #ffffff;
+    }
   }
 }
 
 .intro-slider__item {
   position: relative;
-  min-height: 100vh;
-  padding-top: calc(#{$height-topbar-mobile} + #{$height-header-mobile} + 60px);
+  // min-height: 100vh;
+  min-height: 375px;
+  height: calc(100vh - #{$height-topbar-mobile} - #{$height-header-mobile});
+  // padding-top: calc(#{$height-topbar-mobile} + #{$height-header-mobile} + 60px);
+  padding-top: 60px;
   background-position: center;
   background-size: cover;
   box-sizing: border-box;
@@ -28,7 +38,9 @@
   }
 
   @include mq-min(1024px) {
-    padding-top: calc(#{$height-topbar-desktop} + #{$height-header-desktop} + 60px);
-    height: 100vh;
+    // padding-top: calc(#{$height-topbar-desktop} + #{$height-header-desktop} + 60px);
+    // height: 100vh;
+    min-height: 500px;
+    height: calc(100vh - #{$height-topbar-desktop} - #{$height-header-desktop});
   }
 }

@@ -1,0 +1,60 @@
+.patient-article-card {
+
+}
+
+.patient-article-card__wraplink {
+  display: block;
+  color: $base-color;
+  background-color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 2px 16px rgba(#000000, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: $duration * 2;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 26px rgba(#000000, 0.25);
+  }
+
+  @include mq-min(568px) {
+    display: flex;
+  }
+}
+
+.patient-article-card__picture {
+  @include make-fit-object(400, 300);
+
+
+  @include mq-min(568px) {
+    max-width: 400px;
+    width: 30%;
+    flex-shrink: 0;
+  }
+}
+
+.patient-article-card__content {
+  align-self: center;
+  flex-grow: 1;
+  padding: 20px;
+
+  @include mq-min(768px) {
+    padding: 30px;
+  }
+}
+
+.patient-article-card__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  transition: $duration * 1.5;
+
+  .patient-article-card__wraplink:hover &,
+  .patient-article-card__wraplink:focus & {
+    color: $accent-color;
+  }
+}
+
+.patient-article-card__text {
+  margin: 0;
+}

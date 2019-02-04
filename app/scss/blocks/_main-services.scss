@@ -2,15 +2,23 @@
 
 }
 
-.main-services__row-tables {
+// .main-services__row-tables {
 
-  @include mq-min(768px) {
-    display: flex;
+//   @include mq-min(768px) {
+//     display: flex;
+//   }
+// }
+
+// .main-services__row-tables-column-left {
+//   width: calc(5 / 12 * 100%);
+//   flex-shrink: 0;
+//   margin-right: 60px;
+// }
+
+.main-services__note {
+  a {
+    color: $accent-color;
+    font-weight: 500;
+    text-decoration: none;
   }
-}
-
-.main-services__row-tables-column-left {
-  width: calc(5 / 12 * 100%);
-  flex-shrink: 0;
-  margin-right: 60px;
 }

@@ -14,9 +14,16 @@
     font-weight: 600;
   }
 
-  td {
-    padding: 25px;
+  th {
+    padding: 15px;
     padding-right: 50px;
+    vertical-align: baseline;
+  }
+
+  td {
+    padding: 15px;
+    padding-right: 50px;
+    vertical-align: baseline;
 
     &:last-child {
       // padding-right: 0;
@@ -53,21 +60,21 @@
     }
 
     td {
-      font-size: vh(19);
-
-      &:nth-child(2) {
-        font-size: vh(26);
-      }
-    }
-
-    &--little {
       font-size: vh(17);
 
-      td {
-        &:nth-child(2) {
-          font-size: vh(20);
-        }
+      &:nth-child(2) {
+        font-size: vh(20);
       }
     }
+
+    // &--little {
+    //   font-size: vh(17);
+
+    //   td {
+    //     &:nth-child(2) {
+    //       font-size: vh(20);
+    //     }
+    //   }
+    // }
   }
 }

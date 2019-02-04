@@ -2,10 +2,9 @@
   @include clear-list();
 
   display: flex;
+  align-items: center;
 
-  .menu-item {
-
-  }
+  .menu-item {}
 
   a {
     display: block;
@@ -29,13 +28,20 @@
   }
 
   @include mq-min(1024px) {
-
     a {
-      font-size: vh(16);
+      padding: 6px;
+      padding-left: 12px;
+      padding-right: 12px;
+      font-size: 14px;
+      border-radius: 100px;
+    }
+  }
+
+  @include mq-min(1200px) {
+    a {
       padding-left: 15px;
       padding-right: 15px;
-      // padding-top: vh(12);
-      // padding-bottom: vh(12);
+      font-size: vh(16);
     }
   }
 }

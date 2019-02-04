@@ -1,8 +1,9 @@
 .first-screen-section {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - #{$height-topbar-mobile} - #{$height-header-mobile});
   // min-height: 375px;
-  padding-top: calc(#{$height-topbar-mobile} + #{$height-header-mobile} + 60px);
+  // padding-top: calc(#{$height-topbar-mobile} + #{$height-header-mobile} + 60px);
+  padding-top: 60px;
   color: #ffffff;
   background-color: grey;
   background-position: center;
@@ -22,8 +23,9 @@
   }
 
   @include mq-min(1024px) {
-    padding-top: calc(#{$height-topbar-desktop} + #{$height-header-desktop} + 60px);
-    height: 100vh;
+    // padding-top: calc(#{$height-topbar-desktop} + #{$height-header-desktop} + 60px);
+    min-height: 500px;
+    height: calc(100vh - #{$height-topbar-desktop} - #{$height-header-desktop});
   }
 }
 
@@ -39,8 +41,8 @@
   margin-bottom: auto;
 
   @include mq-min(1024px) {
-    max-width: vh(620);
-    padding-left: calc(#{vh($width-header-sidebar)} + 60px);
+    max-width: vh(750);
+    // padding-left: calc(#{vh($width-header-sidebar)} + 60px);
   }
 }
 

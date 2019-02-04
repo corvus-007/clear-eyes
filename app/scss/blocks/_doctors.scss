@@ -1,0 +1,14 @@
+.doctors {
+  @include clear-list();
+
+  display: grid;
+  grid-gap: $gutter;
+
+  @include mq-min(568px) {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+}
+
+.doctors__item {
+
+}

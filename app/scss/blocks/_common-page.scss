@@ -1,0 +1,27 @@
+.common-page {
+  padding-top: $gutter * 2;
+  padding-bottom: $gutter * 2;
+
+  @include mq-min(1024px) {
+    padding-top: vh(55);
+    padding-bottom: vh(55);
+  }
+}
+
+.common-page__header {
+  margin-bottom: 55px;
+}
+
+.common-page__title {
+
+}
+
+.common-page__subtitle {
+  margin: 0;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.common-page__body {
+
+}

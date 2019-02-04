@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
   $.fancybox.defaults.transitionEffect = 'zoom-in-out';
   $.fancybox.defaults.transitionDuration = 600;
 
+  $('.common-tabs').tabslet({
+    animation: true
+  });
+
   $('input[type="tel"]').inputmask({
     "mask": "+7 (999) 999-99-99"
   });
@@ -14,7 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
     speed: 700,
     arrows: false,
     dots: true,
-    autoplay: true
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: false
   });
 
   $('[data-about-clinic-slider]').slick({
@@ -36,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     centerMode: true,
     slidesToShow: 3,
     centerPadding: '0',
+    // infinite: false,
     responsive: [{
       breakpoint: 770,
       settings: {
@@ -61,9 +68,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }]
   });
 
+  if (document.querySelector('.reviews')) {
+    window.previewReview.init();
+  }
+
+  $('[data-preview-reviews-carousel]').on('init', function () {
+    window.previewReview.init();
+  });
+
   $('[data-preview-reviews-carousel]').slick({
     accessibility: false,
     slidesToShow: 2,
+    infinite: false,
+    adaptiveHeight: true,
     speed: 700,
     responsive: [{
         breakpoint: 770,
@@ -84,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     ]
   });
+
 
   // Init fancybox
   // =============
@@ -136,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }]
   });
-
 
 
   // Environment carousel

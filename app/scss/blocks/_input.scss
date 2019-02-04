@@ -5,11 +5,11 @@
   font: inherit;
   font-weight: 400;
   font-size: 15px;
-  line-height: 24px;
+  line-height: 21px;
   resize: vertical;
   background-color: #ffffff;
-  border: 1px solid $accent-color;
-  border-radius: 100px;
+  border: 1px solid;
+  border-radius: 30px;
   outline: none;
   box-shadow: none;
   box-sizing: border-box;
@@ -19,12 +19,16 @@
   &:hover,
   &:focus {
     background-color: #ffffff;
-    border-color: darken($accent-color, 10%);
+    // border-color: darken($accent-color, 10%);
   }
 
   &::placeholder {
     color: $base-color;
     opacity: 0.8;
+  }
+
+  &--area {
+    border-radius: 30px;
   }
 
   @include mq-min(1024px) {

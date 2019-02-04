@@ -3,6 +3,7 @@ window.outCover = (function () {
 
   var outCover = document.querySelector('.out-cover');
   var outCoverToggle = document.querySelector('.out-cover-toggle');
+  var outCoverClose = outCover.querySelector('.out-cover__close');
   var scrollWidth = window.util.getScrollbarWidth();
 
   var onOutCoverEscPress = function (event) {
@@ -39,6 +40,11 @@ window.outCover = (function () {
     } else {
       hideOutCover();
     }
+  });
+
+  outCoverClose.addEventListener('click', function(event) {
+    event.preventDefault();
+    hideOutCover();
   });
 
   return {

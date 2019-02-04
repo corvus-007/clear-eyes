@@ -1,0 +1,48 @@
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.doctor-card__wraplink {
+  display: block;
+  flex-grow: 1;
+  color: $base-color;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(#000000, 0.1);
+  overflow: hidden;
+  transition: $duration * 2;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 26px rgba(#000000, 0.25);
+  }
+}
+
+.doctor-card__photo {
+  @include make-fit-object(470, 615);
+
+  margin: 0;
+
+  img {
+    object-position: top;
+  }
+}
+
+.doctor-card__content {
+  margin: 0;
+  padding: 20px;
+}
+
+.doctor-card__name {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.doctor-card__post {
+  display: block;
+  font-size: 16px;
+}
