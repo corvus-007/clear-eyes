@@ -1669,68 +1669,59 @@ td > :last-child {
 }
 
 .price-table {
+  font-weight: 500;
   font-size: 20px;
 }
 
-.price-table p {
-  max-width: 740px;
+.price-table li {
+  font-size: 17px;
 }
 
 .price-table small {
-  display: block;
-  opacity: 0.8;
+  color: #7a7a7a;
 }
 
 .price-table b {
   font-weight: 600;
 }
 
-.price-table th {
-  padding: 15px;
-  padding-right: 50px;
-  vertical-align: baseline;
-}
-
 .price-table td {
   padding: 15px;
-  padding-right: 50px;
+  padding-right: 40px;
   vertical-align: baseline;
-}
-
-.price-table td:nth-child(2) {
-  font-weight: 600;
-  font-size: 24px;
-  text-align: right;
-  white-space: nowrap;
 }
 
 .price-table tr:nth-child(odd) td {
   background-color: #f7f7f7;
 }
 
-.price-table--little {
-  font-size: 18px;
-}
-
-.price-table--little td {
-  padding: 10px;
-  padding-right: 40px;
-}
-
-.price-table--little td:nth-child(2) {
-  font-size: 21px;
-}
-
 @media (min-width: 1280px) {
-  .price-table p {
-    max-width: 92.5vh;
+  .price-table {
+    font-size: 2vh;
   }
-  .price-table td {
-    font-size: 2.125vh;
-  }
-  .price-table td:nth-child(2) {
-    font-size: 2.5vh;
-  }
+}
+
+.price-table__head-cell {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 84px;
+  padding: 15px;
+  padding-right: 40px;
+  font-size: 15px;
+  text-align: left;
+  vertical-align: baseline;
+  white-space: nowrap;
+  color: #7a7a7a;
+  background-color: #fff;
+}
+
+.price-table__head-cell--price {
+  text-align: right;
+}
+
+.price-table__price-cell {
+  font-weight: 600;
+  text-align: right;
 }
 
 .popup {
@@ -2895,21 +2886,6 @@ td > :last-child {
           align-items: center;
 }
 
-.main-header__sidebar {
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 0;
-  bottom: calc(-100vh - (-40px - 84px));
-  width: 31.25vh;
-}
-
-@media (max-width: 1023px) {
-  .main-header__sidebar {
-    display: none;
-  }
-}
-
 .main-header__logo {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -3860,11 +3836,18 @@ td > :last-child {
 
 .preview-review__to-full-review {
   width: 100%;
+  margin-top: 15px;
 }
 
 @media (min-width: 568px) {
   .preview-review__to-full-review {
     width: auto;
+    min-width: 0;
+    margin-top: 0;
+    margin-left: 8px;
+    padding: 0 8px;
+    font-size: 12px;
+    vertical-align: middle;
   }
 }
 
