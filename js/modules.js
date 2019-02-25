@@ -190,7 +190,7 @@ window.previewReview = (function () {
       let button = document.createElement('button');
       button.setAttribute('type', 'button');
       // button.setAttribute('class', 'preview-review__to-full-review button button--outline-accent');
-      button.setAttribute('class', 'preview-review__to-full-review button button--outline-accent');
+      button.setAttribute('class', 'preview-review__to-full-review button');
       button.textContent = BUTTON_TEXT_COLLAPSE;
 
       if (textLength > MAX_LENGTH) {

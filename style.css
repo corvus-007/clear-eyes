@@ -3837,6 +3837,8 @@ td > :last-child {
 .preview-review__to-full-review {
   width: 100%;
   margin-top: 15px;
+  color: #323232;
+  background-color: transparent;
 }
 
 @media (min-width: 568px) {
