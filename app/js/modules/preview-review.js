@@ -7,20 +7,22 @@ window.previewReview = (function () {
 
   function init() {
     previewReview.forEach(function (review) {
-      let textNode = review.querySelector('.preview-review__text');
+      let p = review.querySelector('.preview-review__text');
+      let textNode = p.firstChild;
       let originText = textNode.textContent;
       let textLength = originText.length;
       let shortText = '';
       let button = document.createElement('button');
       button.setAttribute('type', 'button');
-      button.setAttribute('class', 'preview-review__to-full-review button button--outline-accent');
+      // button.setAttribute('class', 'preview-review__to-full-review button button--outline-accent');
+      button.setAttribute('class', 'preview-review__to-full-review button');
       button.textContent = BUTTON_TEXT_COLLAPSE;
 
       if (textLength > MAX_LENGTH) {
         shortText = originText.slice(0, MAX_LENGTH) + '…';
         textNode.textContent = shortText;
         review.classList.add(SHORT_REVIEW_CLASS_MOD);
-        review.appendChild(button);
+        p.appendChild(button);
       }
 
       button.addEventListener('click', buttonClickHandler);
@@ -39,5 +41,4 @@ window.previewReview = (function () {
   return {
     init: init
   };
-
 })();
