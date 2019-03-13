@@ -189,7 +189,6 @@ window.previewReview = (function () {
       let shortText = '';
       let button = document.createElement('button');
       button.setAttribute('type', 'button');
-      // button.setAttribute('class', 'preview-review__to-full-review button button--outline-accent');
       button.setAttribute('class', 'preview-review__to-full-review button');
       button.textContent = BUTTON_TEXT_COLLAPSE;
 
@@ -205,7 +204,6 @@ window.previewReview = (function () {
       function buttonClickHandler(evt) {
         evt.preventDefault();
         var isShortClass = review.classList.contains(SHORT_REVIEW_CLASS_MOD);
-        console.log(review);
         review.classList.toggle(SHORT_REVIEW_CLASS_MOD, !isShortClass);
         textNode.textContent = !isShortClass ? shortText : originText;
         button.textContent = !isShortClass ? BUTTON_TEXT_COLLAPSE : BUTTON_TEXT_OPENED;
