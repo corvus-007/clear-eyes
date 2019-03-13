@@ -10,14 +10,20 @@
   flex-grow: 1;
   color: $base-color;
   text-decoration: none;
-  border-radius: 10px;
-  box-shadow: 0 2px 16px rgba(#000000, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1),
+              0 4px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: $duration * 2;
 
   &:hover,
   &:focus {
-    box-shadow: 0 2px 26px rgba(#000000, 0.25);
+    transform: translateY(-5px);
+    box-shadow: 0 2px 2px rgba(41, 47, 56, 0.1),
+                0 4px 4px rgba(41, 47, 56, 0.1),
+                0 8px 8px rgba(41, 47, 56, 0.1),
+                0 16px 16px rgba(41, 47, 56, 0.1),
+                0 32px 32px rgba(41, 47, 56, 0.1);
   }
 }
 
